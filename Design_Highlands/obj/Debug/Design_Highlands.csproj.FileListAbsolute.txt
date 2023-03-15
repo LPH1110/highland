@@ -1,0 +1,36 @@
+D:\MY WORKSPACE\FILES\STUDY\CNPM\N1\Source Code\Design\Design_Highlands\Design_Highlands\bin\Debug\Design_Highlands.exe.config
+D:\MY WORKSPACE\FILES\STUDY\CNPM\N1\Source Code\Design\Design_Highlands\Design_Highlands\bin\Debug\Design_Highlands.exe
+D:\MY WORKSPACE\FILES\STUDY\CNPM\N1\Source Code\Design\Design_Highlands\Design_Highlands\bin\Debug\Design_Highlands.pdb
+D:\MY WORKSPACE\FILES\STUDY\CNPM\N1\Source Code\Design\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.csproj.AssemblyReference.cache
+D:\MY WORKSPACE\FILES\STUDY\CNPM\N1\Source Code\Design\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.csproj.SuggestedBindingRedirects.cache
+D:\MY WORKSPACE\FILES\STUDY\CNPM\N1\Source Code\Design\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.Properties.Resources.resources
+D:\MY WORKSPACE\FILES\STUDY\CNPM\N1\Source Code\Design\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.csproj.GenerateResource.cache
+D:\MY WORKSPACE\FILES\STUDY\CNPM\N1\Source Code\Design\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.csproj.CoreCompileInputs.cache
+D:\MY WORKSPACE\FILES\STUDY\CNPM\N1\Source Code\Design\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.exe
+D:\MY WORKSPACE\FILES\STUDY\CNPM\N1\Source Code\Design\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.pdb
+D:\MY WORKSPACE\FILES\STUDY\CNPM\N1\Source Code\Design\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.Login.resources
+D:\MY WORKSPACE\FILES\STUDY\CNPM\N1\Source Code\Design\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.Home.resources
+D:\MY WORKSPACE\FILES\STUDY\CNPM\N1\Source Code\Design\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.QLNV.resources
+D:\MY WORKSPACE\FILES\STUDY\CNPM\N1\Source Code\Design\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.QLMenu.resources
+D:\MY WORKSPACE\FILES\STUDY\CNPM\N1\Source Code\Design\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.QLTV.resources
+D:\MY WORKSPACE\FILES\STUDY\CNPM\N1\Source Code\Design\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.AddNewStaff.resources
+D:\MY WORKSPACE\FILES\STUDY\CNPM\N1\Source Code\Design\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.AddNewMember.resources
+E:\Design_Highlands\Design_Highlands\Design_Highlands\bin\Debug\Design_Highlands.exe.config
+E:\Design_Highlands\Design_Highlands\Design_Highlands\bin\Debug\Design_Highlands.exe
+E:\Design_Highlands\Design_Highlands\Design_Highlands\bin\Debug\Design_Highlands.pdb
+E:\Design_Highlands\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.csproj.AssemblyReference.cache
+E:\Design_Highlands\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.csproj.SuggestedBindingRedirects.cache
+E:\Design_Highlands\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.AddNewMember.resources
+E:\Design_Highlands\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.AddNewStaff.resources
+E:\Design_Highlands\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.Home.resources
+E:\Design_Highlands\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.Login.resources
+E:\Design_Highlands\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.Properties.Resources.resources
+E:\Design_Highlands\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.QLMenu.resources
+E:\Design_Highlands\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.QLNV.resources
+E:\Design_Highlands\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.QLTV.resources
+E:\Design_Highlands\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.UpdateMember.resources
+E:\Design_Highlands\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.txt_updatePhoneStaff.resources
+E:\Design_Highlands\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.csproj.GenerateResource.cache
+E:\Design_Highlands\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.csproj.CoreCompileInputs.cache
+E:\Design_Highlands\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.exe
+E:\Design_Highlands\Design_Highlands\Design_Highlands\obj\Debug\Design_Highlands.pdb
