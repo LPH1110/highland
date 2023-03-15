@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MongoDB.Driver;
+using MongoDB.Bson;
 
 namespace Design_Highlands
 {
@@ -15,6 +18,13 @@ namespace Design_Highlands
         public Login()
         {
             InitializeComponent();
+        }
+
+
+        private Boolean validateCredentials(String username, String password)
+        {
+            MongoClient client = new MongoClient("");
+            return false;
         }
 
         //Set Placeholder text in textboxs "username"
@@ -56,7 +66,16 @@ namespace Design_Highlands
             }
         }
 
-
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+            if (validateCredentials(txt_username.Text, txt_password.Text))
+            {
+                MessageBox.Show("Login successfully");
+            } else
+            {
+                MessageBox.Show("Login failed. Please check your credentials again.");
+            }
+        }
     }
 
 }
