@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace Design_Highlands
 {
-    public partial class QLNV : Form
+    internal partial class QLNV : Form
     {
+        Staff staff;
         public QLNV()
         {
             InitializeComponent();
         }
+        public QLNV(Staff staff)
+        {
+            InitializeComponent();
+            this.staff = staff;
+        }
+
     }
 }

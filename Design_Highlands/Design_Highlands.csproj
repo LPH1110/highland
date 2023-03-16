@@ -196,6 +196,7 @@
     <Compile Include="QLTV.Designer.cs">
       <DependentUpon>QLTV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Staff.cs" />
     <Compile Include="UpdateMember.cs">
       <SubType>Form</SubType>
     </Compile>

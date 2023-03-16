@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MongoDB.Driver;
 using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
 
 namespace Design_Highlands
 {
@@ -21,10 +22,20 @@ namespace Design_Highlands
         }
 
 
-        private Boolean validateCredentials(String username, String password)
+        private Staff validateCredentials(String username, String password)
         {
-            MongoClient client = new MongoClient("");
-            return false;
+            MongoClient client = new MongoClient("mongodb+srv://52000797:tQ!mTK6NW74wexq@highlandcluster.fc5jjn4.mongodb.net");
+            IMongoCollection<BsonDocument> listCollection = client.GetDatabase("highland").GetCollection<BsonDocument>("staffs");
+            List<BsonDocument> results = listCollection.Find(new BsonDocument()).ToList();
+            foreach (BsonDocument result in results)
+            {
+                if (result.ContainsValue(username) && result.ContainsValue(password))
+                {
+                    Staff staff = BsonSerializer.Deserialize<Staff>(result);
+                    return staff;
+                }
+            }
+            return null;
         }
 
         //Set Placeholder text in textboxs "username"
@@ -66,16 +77,46 @@ namespace Design_Highlands
             }
         }
 
-        private void btn_login_Click(object sender, EventArgs e)
+        private void login()
         {
-            if (validateCredentials(txt_username.Text, txt_password.Text))
+            // Check empty
+            if (txt_username.Text == "" || txt_password.Text == "")
             {
-                MessageBox.Show("Login successfully");
-            } else
+                MessageBox.Show("You have missed your credentials!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Validate
+            Staff staff = validateCredentials(txt_username.Text, txt_password.Text);
+            if (staff != null)
             {
-                MessageBox.Show("Login failed. Please check your credentials again.");
+                MessageBox.Show("Login successfully", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
+                Home homeview = new Home(staff);
+                homeview.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Login failed. Please check your credentials again.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+           
+            login();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            txt_username.Focus();
+        }
+
+        private void btn_cancelLogin_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 
 }

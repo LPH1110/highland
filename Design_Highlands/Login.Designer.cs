@@ -57,7 +57,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(127, 235);
+            this.pictureBox2.Location = new System.Drawing.Point(127, 236);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(45, 36);
@@ -88,6 +88,7 @@
             this.btn_cancelLogin.TabIndex = 12;
             this.btn_cancelLogin.Text = "Hủy";
             this.btn_cancelLogin.UseVisualStyleBackColor = false;
+            this.btn_cancelLogin.Click += new System.EventHandler(this.btn_cancelLogin_Click);
             // 
             // btn_login
             // 
@@ -112,6 +113,8 @@
             this.txt_password.Margin = new System.Windows.Forms.Padding(2);
             this.txt_password.Multiline = true;
             this.txt_password.Name = "txt_password";
+            this.txt_password.PasswordChar = '•';
+            this.txt_password.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txt_password.Size = new System.Drawing.Size(241, 36);
             this.txt_password.TabIndex = 14;
             this.txt_password.Text = "Mật khẩu";
@@ -130,6 +133,7 @@
             this.txt_username.Size = new System.Drawing.Size(241, 36);
             this.txt_username.TabIndex = 15;
             this.txt_username.Text = "Tên đăng nhập";
+            this.txt_username.BorderStyleChanged += new System.EventHandler(this.txt_username_Enter_1);
             this.txt_username.Enter += new System.EventHandler(this.txt_username_Enter_1);
             this.txt_username.Leave += new System.EventHandler(this.txt_username_Leave);
             // 
@@ -157,9 +161,10 @@
             this.ClientSize = new System.Drawing.Size(935, 566);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
