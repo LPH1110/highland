@@ -22,10 +22,12 @@ namespace Design_Highlands
         }
 
 
+
         private Staff validateCredentials(String username, String password)
         {
-            MongoClient client = new MongoClient("mongodb+srv://52000797:tQ!mTK6NW74wexq@highlandcluster.fc5jjn4.mongodb.net");
-            IMongoCollection<BsonDocument> listCollection = client.GetDatabase("highland").GetCollection<BsonDocument>("staffs");
+            var client = new MongoClient("mongodb+srv://52000797:tQ!mTK6NW74wexq@highlandcluster.fc5jjn4.mongodb.net");
+            var db = client.GetDatabase("highland");
+            IMongoCollection<BsonDocument> listCollection = db.GetCollection<BsonDocument>("staffs");
             List<BsonDocument> results = listCollection.Find(new BsonDocument()).ToList();
             foreach (BsonDocument result in results)
             {

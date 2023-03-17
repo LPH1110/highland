@@ -1,9 +1,11 @@
 ﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ThirdParty.Json.LitJson;
 
 namespace Design_Highlands
 {
@@ -11,9 +13,9 @@ namespace Design_Highlands
     {
 
        
-        public Staff(ObjectId id, string staffId, string name, string phone, string birthYear, string identity, string address, string username, string password, string role)
+        public Staff(string id, string staffId, string name, string phone, string birthYear, string identity, string address, string username, string password, string role)
         {
-            Id = id;
+            this.Id = id;
             this.staffId = staffId;
             this.name = name;
             this.phone = phone;
@@ -25,7 +27,8 @@ namespace Design_Highlands
             this.role = role;
         }
 
-        public ObjectId Id { get; set; }
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }
         public string staffId { get; set; }
         public string name { get; set; }
         public string phone { get; set; }

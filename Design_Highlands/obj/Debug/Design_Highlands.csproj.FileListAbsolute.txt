@@ -45,7 +45,6 @@ D:\NET_projects\highland\Design_Highlands\obj\Debug\Design_Highlands.QLMenu.reso
 D:\NET_projects\highland\Design_Highlands\obj\Debug\Design_Highlands.QLNV.resources
 D:\NET_projects\highland\Design_Highlands\obj\Debug\Design_Highlands.QLTV.resources
 D:\NET_projects\highland\Design_Highlands\obj\Debug\Design_Highlands.UpdateMember.resources
-D:\NET_projects\highland\Design_Highlands\obj\Debug\Design_Highlands.txt_updatePhoneStaff.resources
 D:\NET_projects\highland\Design_Highlands\obj\Debug\Design_Highlands.csproj.GenerateResource.cache
 D:\NET_projects\highland\Design_Highlands\obj\Debug\Design_Highlands.csproj.CoreCompileInputs.cache
 D:\NET_projects\highland\Design_Highlands\obj\Debug\Design_Highlands.exe
@@ -96,3 +95,4 @@ D:\NET_projects\highland\Design_Highlands\bin\Debug\System.Security.Principal.Wi
 D:\NET_projects\highland\Design_Highlands\bin\Debug\System.Text.Encoding.CodePages.xml
 D:\NET_projects\highland\Design_Highlands\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\NET_projects\highland\Design_Highlands\obj\Debug\Design_Highlands.csproj.CopyComplete
+D:\NET_projects\highland\Design_Highlands\obj\Debug\Design_Highlands.UpdateStaff.resources

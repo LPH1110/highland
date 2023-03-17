@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MongoDB.Driver;
 
 namespace Design_Highlands
 {
@@ -23,7 +24,6 @@ namespace Design_Highlands
         {
             InitializeComponent();
             this.staff = staff;
-
         }
 
         private Boolean higherAuthorize(Staff staff)
@@ -41,6 +41,9 @@ namespace Design_Highlands
                 case DialogResult.No:
                     break;
                 case DialogResult.Yes:
+                    QLNV staffManagementView = new QLNV(this.staff);
+                    staffManagementView.setStaff(null);
+                    this.staff = null;
                     backToLogin();
                     break;
                 default:
@@ -76,7 +79,7 @@ namespace Design_Highlands
             if(higherAuthorize(this.staff))
             {
                 this.Hide();
-                QLNV staffManagementView = new QLNV();
+                QLNV staffManagementView = new QLNV(this.staff);
                 staffManagementView.ShowDialog();        
              } else
             {
