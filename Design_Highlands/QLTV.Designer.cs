@@ -131,6 +131,7 @@
             this.btn_updateMem.TabIndex = 21;
             this.btn_updateMem.Text = "Sửa thông tin";
             this.btn_updateMem.UseVisualStyleBackColor = false;
+            this.btn_updateMem.Click += new System.EventHandler(this.btn_updateMem_Click);
             // 
             // btn_createMem
             // 
@@ -151,7 +152,7 @@
             this.lb_back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lb_back.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_back.ForeColor = System.Drawing.Color.Black;
-            this.lb_back.Location = new System.Drawing.Point(34, 50);
+            this.lb_back.Location = new System.Drawing.Point(33, 49);
             this.lb_back.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_back.Name = "lb_back";
             this.lb_back.Size = new System.Drawing.Size(65, 18);
@@ -163,10 +164,10 @@
             // 
             this.pb_back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_back.Image = ((System.Drawing.Image)(resources.GetObject("pb_back.Image")));
-            this.pb_back.Location = new System.Drawing.Point(1, 46);
+            this.pb_back.Location = new System.Drawing.Point(0, 47);
             this.pb_back.Margin = new System.Windows.Forms.Padding(2);
             this.pb_back.Name = "pb_back";
-            this.pb_back.Size = new System.Drawing.Size(35, 28);
+            this.pb_back.Size = new System.Drawing.Size(29, 21);
             this.pb_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_back.TabIndex = 18;
             this.pb_back.TabStop = false;

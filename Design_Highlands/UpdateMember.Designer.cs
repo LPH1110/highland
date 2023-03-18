@@ -31,8 +31,8 @@
             this.txt_updateNameMem = new System.Windows.Forms.TextBox();
             this.btn_cancelMem = new System.Windows.Forms.Button();
             this.btn_confirmUpdateMem = new System.Windows.Forms.Button();
+            this.rdbtn_updateFemaleMem = new System.Windows.Forms.RadioButton();
             this.rdbtn_updateMaleMem = new System.Windows.Forms.RadioButton();
-            this.rdbtn_updateFamaleMem = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_updateAddressMem = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -47,7 +47,7 @@
             // 
             this.txt_updateNameMem.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_updateNameMem.Location = new System.Drawing.Point(142, 20);
-            this.txt_updateNameMem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_updateNameMem.Margin = new System.Windows.Forms.Padding(2);
             this.txt_updateNameMem.Multiline = true;
             this.txt_updateNameMem.Name = "txt_updateNameMem";
             this.txt_updateNameMem.Size = new System.Drawing.Size(182, 25);
@@ -58,50 +58,52 @@
             this.btn_cancelMem.BackColor = System.Drawing.Color.DarkGray;
             this.btn_cancelMem.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancelMem.Location = new System.Drawing.Point(169, 299);
-            this.btn_cancelMem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_cancelMem.Margin = new System.Windows.Forms.Padding(2);
             this.btn_cancelMem.Name = "btn_cancelMem";
             this.btn_cancelMem.Size = new System.Drawing.Size(89, 37);
             this.btn_cancelMem.TabIndex = 52;
             this.btn_cancelMem.Text = "Hủy";
             this.btn_cancelMem.UseVisualStyleBackColor = false;
+            this.btn_cancelMem.Click += new System.EventHandler(this.btn_cancelMem_Click);
             // 
             // btn_confirmUpdateMem
             // 
             this.btn_confirmUpdateMem.BackColor = System.Drawing.Color.DarkGray;
             this.btn_confirmUpdateMem.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_confirmUpdateMem.Location = new System.Drawing.Point(60, 299);
-            this.btn_confirmUpdateMem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_confirmUpdateMem.Margin = new System.Windows.Forms.Padding(2);
             this.btn_confirmUpdateMem.Name = "btn_confirmUpdateMem";
             this.btn_confirmUpdateMem.Size = new System.Drawing.Size(93, 37);
             this.btn_confirmUpdateMem.TabIndex = 51;
             this.btn_confirmUpdateMem.Text = "Cập nhật";
             this.btn_confirmUpdateMem.UseVisualStyleBackColor = false;
+            this.btn_confirmUpdateMem.Click += new System.EventHandler(this.btn_confirmUpdateMem_Click);
+            // 
+            // rdbtn_updateFemaleMem
+            // 
+            this.rdbtn_updateFemaleMem.AutoSize = true;
+            this.rdbtn_updateFemaleMem.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbtn_updateFemaleMem.Location = new System.Drawing.Point(205, 70);
+            this.rdbtn_updateFemaleMem.Margin = new System.Windows.Forms.Padding(2);
+            this.rdbtn_updateFemaleMem.Name = "rdbtn_updateFemaleMem";
+            this.rdbtn_updateFemaleMem.Size = new System.Drawing.Size(42, 18);
+            this.rdbtn_updateFemaleMem.TabIndex = 50;
+            this.rdbtn_updateFemaleMem.TabStop = true;
+            this.rdbtn_updateFemaleMem.Text = "Nữ";
+            this.rdbtn_updateFemaleMem.UseVisualStyleBackColor = true;
             // 
             // rdbtn_updateMaleMem
             // 
             this.rdbtn_updateMaleMem.AutoSize = true;
             this.rdbtn_updateMaleMem.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbtn_updateMaleMem.Location = new System.Drawing.Point(205, 70);
-            this.rdbtn_updateMaleMem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdbtn_updateMaleMem.Location = new System.Drawing.Point(142, 70);
+            this.rdbtn_updateMaleMem.Margin = new System.Windows.Forms.Padding(2);
             this.rdbtn_updateMaleMem.Name = "rdbtn_updateMaleMem";
-            this.rdbtn_updateMaleMem.Size = new System.Drawing.Size(42, 18);
-            this.rdbtn_updateMaleMem.TabIndex = 50;
+            this.rdbtn_updateMaleMem.Size = new System.Drawing.Size(53, 18);
+            this.rdbtn_updateMaleMem.TabIndex = 49;
             this.rdbtn_updateMaleMem.TabStop = true;
-            this.rdbtn_updateMaleMem.Text = "Nữ";
+            this.rdbtn_updateMaleMem.Text = "Nam";
             this.rdbtn_updateMaleMem.UseVisualStyleBackColor = true;
-            // 
-            // rdbtn_updateFamaleMem
-            // 
-            this.rdbtn_updateFamaleMem.AutoSize = true;
-            this.rdbtn_updateFamaleMem.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbtn_updateFamaleMem.Location = new System.Drawing.Point(142, 70);
-            this.rdbtn_updateFamaleMem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.rdbtn_updateFamaleMem.Name = "rdbtn_updateFamaleMem";
-            this.rdbtn_updateFamaleMem.Size = new System.Drawing.Size(53, 18);
-            this.rdbtn_updateFamaleMem.TabIndex = 49;
-            this.rdbtn_updateFamaleMem.TabStop = true;
-            this.rdbtn_updateFamaleMem.Text = "Nam";
-            this.rdbtn_updateFamaleMem.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -118,7 +120,7 @@
             // 
             this.txt_updateAddressMem.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_updateAddressMem.Location = new System.Drawing.Point(142, 214);
-            this.txt_updateAddressMem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_updateAddressMem.Margin = new System.Windows.Forms.Padding(2);
             this.txt_updateAddressMem.Multiline = true;
             this.txt_updateAddressMem.Name = "txt_updateAddressMem";
             this.txt_updateAddressMem.Size = new System.Drawing.Size(182, 54);
@@ -139,7 +141,7 @@
             // 
             this.txt_updatePhoneMem.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_updatePhoneMem.Location = new System.Drawing.Point(142, 166);
-            this.txt_updatePhoneMem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_updatePhoneMem.Margin = new System.Windows.Forms.Padding(2);
             this.txt_updatePhoneMem.Multiline = true;
             this.txt_updatePhoneMem.Name = "txt_updatePhoneMem";
             this.txt_updatePhoneMem.Size = new System.Drawing.Size(182, 25);
@@ -160,7 +162,7 @@
             // 
             this.txt_updateBirthYearMem.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_updateBirthYearMem.Location = new System.Drawing.Point(142, 115);
-            this.txt_updateBirthYearMem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_updateBirthYearMem.Margin = new System.Windows.Forms.Padding(2);
             this.txt_updateBirthYearMem.Multiline = true;
             this.txt_updateBirthYearMem.Name = "txt_updateBirthYearMem";
             this.txt_updateBirthYearMem.Size = new System.Drawing.Size(182, 25);
@@ -196,8 +198,8 @@
             this.Controls.Add(this.txt_updateNameMem);
             this.Controls.Add(this.btn_cancelMem);
             this.Controls.Add(this.btn_confirmUpdateMem);
+            this.Controls.Add(this.rdbtn_updateFemaleMem);
             this.Controls.Add(this.rdbtn_updateMaleMem);
-            this.Controls.Add(this.rdbtn_updateFamaleMem);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txt_updateAddressMem);
             this.Controls.Add(this.label7);
@@ -206,7 +208,7 @@
             this.Controls.Add(this.txt_updateBirthYearMem);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UpdateMember";
             this.Text = "UpdateMember";
             this.Load += new System.EventHandler(this.UpdateMember_Load);
@@ -220,8 +222,8 @@
         private System.Windows.Forms.TextBox txt_updateNameMem;
         private System.Windows.Forms.Button btn_cancelMem;
         private System.Windows.Forms.Button btn_confirmUpdateMem;
+        private System.Windows.Forms.RadioButton rdbtn_updateFemaleMem;
         private System.Windows.Forms.RadioButton rdbtn_updateMaleMem;
-        private System.Windows.Forms.RadioButton rdbtn_updateFamaleMem;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_updateAddressMem;
         private System.Windows.Forms.Label label7;

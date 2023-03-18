@@ -11,12 +11,15 @@ namespace Design_Highlands
 {
     internal class Member
     {
-        public Member(string id, string name, string phone, string rank)
+        public Member(string id, string name, string phone, string address, string gender, string birthYear, string rank)
         {
             this.Id = id;
             this.staffId = staffId;
             this.name = name;
             this.phone = phone;
+            this.address = address;
+            this.gender = gender;
+            this.birthYear = birthYear  ;
             this.rank = rank;
         }
 
@@ -25,6 +28,9 @@ namespace Design_Highlands
         public string staffId { get; set; }
         public string name { get; set; }
         public string phone { get; set; }
+        public string address { get; set; }
+        public string gender { get; set; }
+        public string birthYear { get; set; }
         public string rank { get; set; }
 
     }

@@ -45,6 +45,9 @@ namespace Design_Highlands
             table.Columns.Add("Id", typeof(string));
             table.Columns.Add("Name", typeof(string));
             table.Columns.Add("Phone", typeof(string));
+            table.Columns.Add("Birth Year", typeof(string));
+            table.Columns.Add("Gender", typeof(string));
+            table.Columns.Add("Address", typeof(string));
             table.Columns.Add("Rank", typeof(string));
 
             var client = new MongoClient("mongodb+srv://52000797:tQ!mTK6NW74wexq@highlandcluster.fc5jjn4.mongodb.net");
@@ -55,7 +58,7 @@ namespace Design_Highlands
             foreach (BsonDocument result in results)
             {
                 Member member = BsonSerializer.Deserialize<Member>(result);
-                table.Rows.Add(member.Id, member.name, member.phone, member.rank);
+                table.Rows.Add(member.Id, member.name, member.phone, member.birthYear, member.gender, member.address, member.rank);
             }
 
             membersGridView.DataSource = table;
@@ -63,7 +66,7 @@ namespace Design_Highlands
 
         private void showUpdateMemberDialog(Member member)
         {
-            UpdateMember updateMemberDialog = new UpdateMember(member);
+            UpdateMember updateMemberDialog = new UpdateMember(member, membersGridView);
             updateMemberDialog.ShowDialog();
         }
 
@@ -73,9 +76,12 @@ namespace Design_Highlands
             DataGridViewRow selectedRow = membersGridView.Rows[rowIndex];
             var member = new Member(
                 id: selectedRow.Cells[0].Value.ToString(),
-                name: selectedRow.Cells[2].Value.ToString(),
-                phone: selectedRow.Cells[3].Value.ToString(),
-                rank: selectedRow.Cells[4].Value.ToString()
+                name: selectedRow.Cells[1].Value.ToString(),
+                phone: selectedRow.Cells[2].Value.ToString(),
+                birthYear: selectedRow.Cells[3].Value.ToString(),
+                gender: selectedRow.Cells[4].Value.ToString(),
+                address: selectedRow.Cells[5].Value.ToString(),
+                rank: selectedRow.Cells[6].Value.ToString()
                );
             return member;
         }
@@ -93,8 +99,6 @@ namespace Design_Highlands
             showHomeView();
         }
 
-        
-
         private void QLTV_Load(object sender, EventArgs e)
         {
             loadMembers();
@@ -104,6 +108,18 @@ namespace Design_Highlands
         {
             var selectedMember = getCurrentSelectedMember();
             showUpdateMemberDialog(selectedMember);
+        }
+
+        private void btn_updateMem_Click(object sender, EventArgs e)
+        {
+            if (membersGridView.SelectedRows.Count > 0)
+            {
+                var selectedMember = getCurrentSelectedMember();
+                showUpdateMemberDialog(selectedMember);
+            } else
+            {
+                MessageBox.Show("You haven't selected any rows", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            } 
         }
     }
 }
