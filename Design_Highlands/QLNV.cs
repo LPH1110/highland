@@ -164,24 +164,33 @@ namespace Design_Highlands
         {
            if (staffsGridView.SelectedRows.Count > 0)
             {
-                // Connect to mongo client and get collection
-                var client = new MongoClient("mongodb+srv://52000797:tQ!mTK6NW74wexq@highlandcluster.fc5jjn4.mongodb.net");
-                var db = client.GetDatabase("highland");
-                IMongoCollection<BsonDocument> collection = db.GetCollection<BsonDocument>("staffs");
+                DialogResult dialogResult = MessageBox.Show("Permanently remove this staff?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                switch(dialogResult)
+                {
+                    case DialogResult.Yes:
+                        // Connect to mongo client and get collection
+                        var client = new MongoClient("mongodb+srv://52000797:tQ!mTK6NW74wexq@highlandcluster.fc5jjn4.mongodb.net");
+                        var db = client.GetDatabase("highland");
+                        IMongoCollection<BsonDocument> collection = db.GetCollection<BsonDocument>("staffs");
 
-                // Find selected row then get staff _id
-                int rowIndex = staffsGridView.CurrentCell.RowIndex;
-                DataGridViewRow selectedRow = staffsGridView.Rows[rowIndex];
-                ObjectId id = ObjectId.Parse(selectedRow.Cells[0].Value.ToString());
+                        // Find selected row then get staff _id
+                        int rowIndex = staffsGridView.CurrentCell.RowIndex;
+                        DataGridViewRow selectedRow = staffsGridView.Rows[rowIndex];
+                        ObjectId id = ObjectId.Parse(selectedRow.Cells[0].Value.ToString());
 
 
-                // Remove row
-                DataTable dataTable = (DataTable)staffsGridView.DataSource;
-                DataRow row = (staffsGridView.Rows[rowIndex].DataBoundItem as DataRowView).Row;
-                dataTable.Rows.Remove(row);
-                
-                deleteStaff(id, collection);
+                        // Remove row
+                        DataTable dataTable = (DataTable)staffsGridView.DataSource;
+                        DataRow row = (staffsGridView.Rows[rowIndex].DataBoundItem as DataRowView).Row;
+                        dataTable.Rows.Remove(row);
 
+                        deleteStaff(id, collection);
+                        break;
+                    case DialogResult.No:
+                        break;
+                    default:
+                        break;
+                }
             }
             else
             {

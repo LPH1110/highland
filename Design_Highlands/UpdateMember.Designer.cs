@@ -46,19 +46,21 @@
             // txt_updateNameMem
             // 
             this.txt_updateNameMem.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_updateNameMem.Location = new System.Drawing.Point(189, 24);
+            this.txt_updateNameMem.Location = new System.Drawing.Point(142, 20);
+            this.txt_updateNameMem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_updateNameMem.Multiline = true;
             this.txt_updateNameMem.Name = "txt_updateNameMem";
-            this.txt_updateNameMem.Size = new System.Drawing.Size(242, 30);
+            this.txt_updateNameMem.Size = new System.Drawing.Size(182, 25);
             this.txt_updateNameMem.TabIndex = 53;
             // 
             // btn_cancelMem
             // 
             this.btn_cancelMem.BackColor = System.Drawing.Color.DarkGray;
             this.btn_cancelMem.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancelMem.Location = new System.Drawing.Point(225, 368);
+            this.btn_cancelMem.Location = new System.Drawing.Point(169, 299);
+            this.btn_cancelMem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_cancelMem.Name = "btn_cancelMem";
-            this.btn_cancelMem.Size = new System.Drawing.Size(119, 46);
+            this.btn_cancelMem.Size = new System.Drawing.Size(89, 37);
             this.btn_cancelMem.TabIndex = 52;
             this.btn_cancelMem.Text = "Hủy";
             this.btn_cancelMem.UseVisualStyleBackColor = false;
@@ -67,9 +69,10 @@
             // 
             this.btn_confirmUpdateMem.BackColor = System.Drawing.Color.DarkGray;
             this.btn_confirmUpdateMem.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_confirmUpdateMem.Location = new System.Drawing.Point(80, 368);
+            this.btn_confirmUpdateMem.Location = new System.Drawing.Point(60, 299);
+            this.btn_confirmUpdateMem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_confirmUpdateMem.Name = "btn_confirmUpdateMem";
-            this.btn_confirmUpdateMem.Size = new System.Drawing.Size(124, 46);
+            this.btn_confirmUpdateMem.Size = new System.Drawing.Size(93, 37);
             this.btn_confirmUpdateMem.TabIndex = 51;
             this.btn_confirmUpdateMem.Text = "Cập nhật";
             this.btn_confirmUpdateMem.UseVisualStyleBackColor = false;
@@ -78,9 +81,10 @@
             // 
             this.rdbtn_updateMaleMem.AutoSize = true;
             this.rdbtn_updateMaleMem.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbtn_updateMaleMem.Location = new System.Drawing.Point(273, 86);
+            this.rdbtn_updateMaleMem.Location = new System.Drawing.Point(205, 70);
+            this.rdbtn_updateMaleMem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdbtn_updateMaleMem.Name = "rdbtn_updateMaleMem";
-            this.rdbtn_updateMaleMem.Size = new System.Drawing.Size(50, 22);
+            this.rdbtn_updateMaleMem.Size = new System.Drawing.Size(42, 18);
             this.rdbtn_updateMaleMem.TabIndex = 50;
             this.rdbtn_updateMaleMem.TabStop = true;
             this.rdbtn_updateMaleMem.Text = "Nữ";
@@ -90,9 +94,10 @@
             // 
             this.rdbtn_updateFamaleMem.AutoSize = true;
             this.rdbtn_updateFamaleMem.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbtn_updateFamaleMem.Location = new System.Drawing.Point(190, 86);
+            this.rdbtn_updateFamaleMem.Location = new System.Drawing.Point(142, 70);
+            this.rdbtn_updateFamaleMem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdbtn_updateFamaleMem.Name = "rdbtn_updateFamaleMem";
-            this.rdbtn_updateFamaleMem.Size = new System.Drawing.Size(64, 22);
+            this.rdbtn_updateFamaleMem.Size = new System.Drawing.Size(53, 18);
             this.rdbtn_updateFamaleMem.TabIndex = 49;
             this.rdbtn_updateFamaleMem.TabStop = true;
             this.rdbtn_updateFamaleMem.Text = "Nam";
@@ -102,66 +107,73 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(17, 86);
+            this.label8.Location = new System.Drawing.Point(13, 70);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(91, 20);
+            this.label8.Size = new System.Drawing.Size(72, 17);
             this.label8.TabIndex = 48;
             this.label8.Text = "Giới tính";
             // 
             // txt_updateAddressMem
             // 
             this.txt_updateAddressMem.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_updateAddressMem.Location = new System.Drawing.Point(189, 264);
+            this.txt_updateAddressMem.Location = new System.Drawing.Point(142, 214);
+            this.txt_updateAddressMem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_updateAddressMem.Multiline = true;
             this.txt_updateAddressMem.Name = "txt_updateAddressMem";
-            this.txt_updateAddressMem.Size = new System.Drawing.Size(242, 65);
+            this.txt_updateAddressMem.Size = new System.Drawing.Size(182, 54);
             this.txt_updateAddressMem.TabIndex = 47;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(17, 281);
+            this.label7.Location = new System.Drawing.Point(13, 228);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(74, 20);
+            this.label7.Size = new System.Drawing.Size(59, 17);
             this.label7.TabIndex = 46;
             this.label7.Text = "Địa chỉ";
             // 
             // txt_updatePhoneMem
             // 
             this.txt_updatePhoneMem.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_updatePhoneMem.Location = new System.Drawing.Point(189, 204);
+            this.txt_updatePhoneMem.Location = new System.Drawing.Point(142, 166);
+            this.txt_updatePhoneMem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_updatePhoneMem.Multiline = true;
             this.txt_updatePhoneMem.Name = "txt_updatePhoneMem";
-            this.txt_updatePhoneMem.Size = new System.Drawing.Size(242, 30);
+            this.txt_updatePhoneMem.Size = new System.Drawing.Size(182, 25);
             this.txt_updatePhoneMem.TabIndex = 45;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(17, 214);
+            this.label3.Location = new System.Drawing.Point(13, 174);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 20);
+            this.label3.Size = new System.Drawing.Size(110, 17);
             this.label3.TabIndex = 44;
             this.label3.Text = "Số điện thoại";
             // 
             // txt_updateBirthYearMem
             // 
             this.txt_updateBirthYearMem.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_updateBirthYearMem.Location = new System.Drawing.Point(189, 142);
+            this.txt_updateBirthYearMem.Location = new System.Drawing.Point(142, 115);
+            this.txt_updateBirthYearMem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_updateBirthYearMem.Multiline = true;
             this.txt_updateBirthYearMem.Name = "txt_updateBirthYearMem";
-            this.txt_updateBirthYearMem.Size = new System.Drawing.Size(242, 30);
+            this.txt_updateBirthYearMem.Size = new System.Drawing.Size(182, 25);
             this.txt_updateBirthYearMem.TabIndex = 43;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 148);
+            this.label2.Location = new System.Drawing.Point(13, 120);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 20);
+            this.label2.Size = new System.Drawing.Size(79, 17);
             this.label2.TabIndex = 42;
             this.label2.Text = "Năm sinh";
             // 
@@ -169,17 +181,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 28);
+            this.label1.Location = new System.Drawing.Point(13, 23);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 20);
+            this.label1.Size = new System.Drawing.Size(124, 17);
             this.label1.TabIndex = 41;
             this.label1.Text = "Tên thành viên";
             // 
             // UpdateMember
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 438);
+            this.ClientSize = new System.Drawing.Size(337, 356);
             this.Controls.Add(this.txt_updateNameMem);
             this.Controls.Add(this.btn_cancelMem);
             this.Controls.Add(this.btn_confirmUpdateMem);
@@ -193,8 +206,10 @@
             this.Controls.Add(this.txt_updateBirthYearMem);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UpdateMember";
             this.Text = "UpdateMember";
+            this.Load += new System.EventHandler(this.UpdateMember_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

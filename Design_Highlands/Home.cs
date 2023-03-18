@@ -79,9 +79,23 @@ namespace Design_Highlands
             if(higherAuthorize(this.staff))
             {
                 this.Hide();
-                QLNV staffManagementView = new QLNV(this.staff);
-                staffManagementView.ShowDialog();        
+                QLNV staffsManagementView = new QLNV(this.staff);
+                staffsManagementView.ShowDialog();        
              } else
+            {
+                MessageBox.Show("You don't have permission to access this field!", "Authorization", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void pic_members_Click(object sender, EventArgs e)
+        {
+            if(higherAuthorize(this.staff))
+            {
+                this.Hide();
+                QLTV membersManagermentView = new QLTV(this.staff);
+                membersManagermentView.ShowDialog();
+
+            } else
             {
                 MessageBox.Show("You don't have permission to access this field!", "Authorization", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
