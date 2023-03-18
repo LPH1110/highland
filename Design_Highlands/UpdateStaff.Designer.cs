@@ -73,6 +73,7 @@
             this.btn_confirmUpdateStaff.TabIndex = 38;
             this.btn_confirmUpdateStaff.Text = "Cập nhật";
             this.btn_confirmUpdateStaff.UseVisualStyleBackColor = false;
+            this.btn_confirmUpdateStaff.Click += new System.EventHandler(this.btn_confirmUpdateStaff_Click);
             // 
             // rdbtn_updateMaleStaff
             // 

@@ -41,6 +41,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_deleteStaff = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.staffsGridView)).BeginInit();
             this.panel1.SuspendLayout();
@@ -77,6 +78,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.pictureBox8);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(2, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
@@ -110,7 +112,7 @@
             // 
             this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(428, 54);
+            this.pictureBox8.Location = new System.Drawing.Point(887, 5);
             this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(22, 18);
@@ -123,7 +125,7 @@
             this.btn_updateStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btn_updateStaff.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_updateStaff.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btn_updateStaff.Location = new System.Drawing.Point(134, 25);
+            this.btn_updateStaff.Location = new System.Drawing.Point(0, 25);
             this.btn_updateStaff.Margin = new System.Windows.Forms.Padding(2);
             this.btn_updateStaff.Name = "btn_updateStaff";
             this.btn_updateStaff.Size = new System.Drawing.Size(138, 41);
@@ -137,13 +139,14 @@
             this.btn_createStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btn_createStaff.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_createStaff.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btn_createStaff.Location = new System.Drawing.Point(276, 25);
+            this.btn_createStaff.Location = new System.Drawing.Point(284, 25);
             this.btn_createStaff.Margin = new System.Windows.Forms.Padding(2);
             this.btn_createStaff.Name = "btn_createStaff";
-            this.btn_createStaff.Size = new System.Drawing.Size(148, 41);
+            this.btn_createStaff.Size = new System.Drawing.Size(158, 41);
             this.btn_createStaff.TabIndex = 20;
             this.btn_createStaff.Text = "Thêm nhân viên";
             this.btn_createStaff.UseVisualStyleBackColor = false;
+            this.btn_createStaff.Click += new System.EventHandler(this.btn_createStaff_Click);
             // 
             // label7
             // 
@@ -186,7 +189,7 @@
             // panel4
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.Controls.Add(this.pictureBox8);
+            this.panel4.Controls.Add(this.btn_deleteStaff);
             this.panel4.Controls.Add(this.btn_updateStaff);
             this.panel4.Controls.Add(this.btn_createStaff);
             this.panel4.Location = new System.Drawing.Point(463, 491);
@@ -194,6 +197,20 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(452, 79);
             this.panel4.TabIndex = 23;
+            // 
+            // btn_deleteStaff
+            // 
+            this.btn_deleteStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btn_deleteStaff.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_deleteStaff.ForeColor = System.Drawing.Color.AliceBlue;
+            this.btn_deleteStaff.Location = new System.Drawing.Point(142, 25);
+            this.btn_deleteStaff.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_deleteStaff.Name = "btn_deleteStaff";
+            this.btn_deleteStaff.Size = new System.Drawing.Size(138, 41);
+            this.btn_deleteStaff.TabIndex = 23;
+            this.btn_deleteStaff.Text = "Xóa nhân viên";
+            this.btn_deleteStaff.UseVisualStyleBackColor = false;
+            this.btn_deleteStaff.Click += new System.EventHandler(this.btn_deleteStaff_Click);
             // 
             // QLNV
             // 
@@ -235,5 +252,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btn_deleteStaff;
     }
 }

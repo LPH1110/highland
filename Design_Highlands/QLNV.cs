@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +18,7 @@ namespace Design_Highlands
     internal partial class QLNV : Form
     {
         Staff staff;
-
+        DataTable table;
         public QLNV()
         {
             InitializeComponent();
@@ -54,12 +55,14 @@ namespace Design_Highlands
 
         private void staffsGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            getCurrentSelectedStaff(staffsGridView);
+            var selectedStaff = getCurrentSelectedStaff(staffsGridView);
+            showUpdateStaffDialog(selectedStaff);
         }
 
-        private void QLNV_Load(object sender, EventArgs e)
+        public void loadStaffData()
         {
             DataTable table = new DataTable();
+            this.table = table;
 
             table.Columns.Add("Id", typeof(string));
             table.Columns.Add("Staff ID", typeof(string));
@@ -85,8 +88,11 @@ namespace Design_Highlands
             }
 
             staffsGridView.DataSource = table;
+        }
 
-
+        private void QLNV_Load(object sender, EventArgs e)
+        {
+            loadStaffData();
         }
         
         private Boolean checkRowSelected(DataGridView gridView)
@@ -97,7 +103,7 @@ namespace Design_Highlands
         private void showUpdateStaffDialog(Staff staff)
         {
 
-            UpdateStaff updateStaffDialog = new UpdateStaff(staff);
+            UpdateStaff updateStaffDialog = new UpdateStaff(staff, staffsGridView);
             updateStaffDialog.ShowDialog();
 
             
@@ -112,9 +118,9 @@ namespace Design_Highlands
                 staffId: selectedRow.Cells[1].Value.ToString(),
                 name: selectedRow.Cells[2].Value.ToString(),
                 phone: selectedRow.Cells[3].Value.ToString(),
-                birthYear: selectedRow.Cells[4].Value.ToString(),
-                identity: selectedRow.Cells[5].Value.ToString(),
-                address: selectedRow.Cells[6].Value.ToString(),
+                identity: selectedRow.Cells[4].Value.ToString(),
+                address: selectedRow.Cells[5].Value.ToString(),
+                birthYear: selectedRow.Cells[6].Value.ToString(),
                 role: selectedRow.Cells[7].Value.ToString(),
                 username: selectedRow.Cells[8].Value.ToString(),
                 password: selectedRow.Cells[9].Value.ToString()
@@ -126,14 +132,27 @@ namespace Design_Highlands
         {
             if (checkRowSelected(staffsGridView))
             {
-                
-                showUpdateStaffDialog(getCurrentSelectedStaff(staffsGridView));
+                var selectedStaff = getCurrentSelectedStaff(staffsGridView);
+                showUpdateStaffDialog(selectedStaff);
 
             }
             else
             {
                 MessageBox.Show("You haven't selected any rows yet!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void btn_createStaff_Click(object sender, EventArgs e)
+        {
+            AddNewStaff newStaffDialog = new AddNewStaff(staffsGridView, table);
+            newStaffDialog.ShowDialog();
+        }
+
+        private async void deleteStaff(string id, IMongoCollection<BsonDocument> collection) 
+        {
+        }
+        private void btn_deleteStaff_Click(object sender, EventArgs e)
+        {
         }
     }
 }
