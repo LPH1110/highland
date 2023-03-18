@@ -148,11 +148,45 @@ namespace Design_Highlands
             newStaffDialog.ShowDialog();
         }
 
-        private async void deleteStaff(string id, IMongoCollection<BsonDocument> collection) 
+        private async void deleteStaff(ObjectId id, IMongoCollection<BsonDocument> collection) 
         {
+            var filter = Builders<BsonDocument>.Filter.Eq("_id", id);
+            DeleteResult result = await collection.DeleteOneAsync(filter);
+            if (result.IsAcknowledged)
+            {
+                MessageBox.Show("Deleted staff successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            } else
+            {
+                MessageBox.Show("Failed to delete staff!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void btn_deleteStaff_Click(object sender, EventArgs e)
         {
+           if (staffsGridView.SelectedRows.Count > 0)
+            {
+                // Connect to mongo client and get collection
+                var client = new MongoClient("mongodb+srv://52000797:tQ!mTK6NW74wexq@highlandcluster.fc5jjn4.mongodb.net");
+                var db = client.GetDatabase("highland");
+                IMongoCollection<BsonDocument> collection = db.GetCollection<BsonDocument>("staffs");
+
+                // Find selected row then get staff _id
+                int rowIndex = staffsGridView.CurrentCell.RowIndex;
+                DataGridViewRow selectedRow = staffsGridView.Rows[rowIndex];
+                ObjectId id = ObjectId.Parse(selectedRow.Cells[0].Value.ToString());
+
+
+                // Remove row
+                DataTable dataTable = (DataTable)staffsGridView.DataSource;
+                DataRow row = (staffsGridView.Rows[rowIndex].DataBoundItem as DataRowView).Row;
+                dataTable.Rows.Remove(row);
+                
+                deleteStaff(id, collection);
+
+            }
+            else
+            {
+                MessageBox.Show("You haven't selected any row. Please select one!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

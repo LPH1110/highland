@@ -95,7 +95,6 @@ namespace Design_Highlands
                     { "address", txt_addressStaff.Text }
                 };
 
-                // Update grid view 
 
                 // write staff to database
                 createStaff(document, collection);
@@ -103,8 +102,11 @@ namespace Design_Highlands
                 Staff staff = findStaffByIdentity(txt_identityStaff.Text, collection);
                 if (staff != null)
                 {
+                    // Update grid view 
+
                     DataTable dataTable = (DataTable)staffsGridView.DataSource;
                     DataRow newRow = dataTable.NewRow();
+
                     newRow["Id"] = staff.Id;
                     newRow["Staff Id"] = staff.staffId;
                     newRow["Name"] = staff.name;
