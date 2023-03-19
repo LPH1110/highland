@@ -34,18 +34,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.btn_updateMem = new System.Windows.Forms.Button();
             this.btn_createMem = new System.Windows.Forms.Button();
             this.lb_back = new System.Windows.Forms.Label();
             this.pb_back = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_deleteMem = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.membersGridView)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_back)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -107,24 +106,12 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(428, 54);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(22, 18);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 22;
-            this.pictureBox8.TabStop = false;
-            // 
             // btn_updateMem
             // 
             this.btn_updateMem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btn_updateMem.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_updateMem.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btn_updateMem.Location = new System.Drawing.Point(124, 25);
+            this.btn_updateMem.Location = new System.Drawing.Point(7, 26);
             this.btn_updateMem.Margin = new System.Windows.Forms.Padding(2);
             this.btn_updateMem.Name = "btn_updateMem";
             this.btn_updateMem.Size = new System.Drawing.Size(138, 41);
@@ -138,13 +125,14 @@
             this.btn_createMem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btn_createMem.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_createMem.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btn_createMem.Location = new System.Drawing.Point(267, 25);
+            this.btn_createMem.Location = new System.Drawing.Point(291, 26);
             this.btn_createMem.Margin = new System.Windows.Forms.Padding(2);
             this.btn_createMem.Name = "btn_createMem";
             this.btn_createMem.Size = new System.Drawing.Size(157, 41);
             this.btn_createMem.TabIndex = 20;
             this.btn_createMem.Text = "Thêm thành viên";
             this.btn_createMem.UseVisualStyleBackColor = false;
+            this.btn_createMem.Click += new System.EventHandler(this.btn_createMem_Click);
             // 
             // lb_back
             // 
@@ -176,7 +164,7 @@
             // panel4
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.Controls.Add(this.pictureBox8);
+            this.panel4.Controls.Add(this.btn_deleteMem);
             this.panel4.Controls.Add(this.btn_updateMem);
             this.panel4.Controls.Add(this.btn_createMem);
             this.panel4.Location = new System.Drawing.Point(463, 488);
@@ -195,6 +183,20 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(459, 81);
             this.panel3.TabIndex = 26;
+            // 
+            // btn_deleteMem
+            // 
+            this.btn_deleteMem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btn_deleteMem.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_deleteMem.ForeColor = System.Drawing.Color.AliceBlue;
+            this.btn_deleteMem.Location = new System.Drawing.Point(149, 25);
+            this.btn_deleteMem.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_deleteMem.Name = "btn_deleteMem";
+            this.btn_deleteMem.Size = new System.Drawing.Size(138, 41);
+            this.btn_deleteMem.TabIndex = 23;
+            this.btn_deleteMem.Text = "Xóa thành viên";
+            this.btn_deleteMem.UseVisualStyleBackColor = false;
+            this.btn_deleteMem.Click += new System.EventHandler(this.btn_deleteMem_Click);
             // 
             // QLTV
             // 
@@ -216,7 +218,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_back)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -232,12 +233,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Button btn_updateMem;
         private System.Windows.Forms.Button btn_createMem;
         private System.Windows.Forms.Label lb_back;
         private System.Windows.Forms.PictureBox pb_back;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btn_deleteMem;
     }
 }

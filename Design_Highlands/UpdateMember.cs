@@ -72,11 +72,11 @@ namespace Design_Highlands
                 int rowIndex = membersGridView.CurrentCell.RowIndex;
                 DataGridViewRow selectedRow = membersGridView.Rows[rowIndex];
 
-                selectedRow.Cells[1].Value = txt_updateNameMem.Text;
-                selectedRow.Cells[2].Value = txt_updatePhoneMem.Text;
-                selectedRow.Cells[3].Value = txt_updateBirthYearMem.Text;
-                selectedRow.Cells[4].Value = genderValue;
-                selectedRow.Cells[5].Value = txt_updateAddressMem.Text;
+                selectedRow.Cells[2].Value = txt_updateNameMem.Text;
+                selectedRow.Cells[3].Value = txt_updatePhoneMem.Text;
+                selectedRow.Cells[4].Value = txt_updateBirthYearMem.Text;
+                selectedRow.Cells[5].Value = genderValue;
+                selectedRow.Cells[6].Value = txt_updateAddressMem.Text;
 
                 DialogResult dialogResult = MessageBox.Show("Updated member's info successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 switch (dialogResult)

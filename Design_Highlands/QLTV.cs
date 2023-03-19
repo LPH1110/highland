@@ -43,6 +43,7 @@ namespace Design_Highlands
             this.table = table;
 
             table.Columns.Add("Id", typeof(string));
+            table.Columns.Add("Member Id",typeof(string));
             table.Columns.Add("Name", typeof(string));
             table.Columns.Add("Phone", typeof(string));
             table.Columns.Add("Birth Year", typeof(string));
@@ -58,7 +59,7 @@ namespace Design_Highlands
             foreach (BsonDocument result in results)
             {
                 Member member = BsonSerializer.Deserialize<Member>(result);
-                table.Rows.Add(member.Id, member.name, member.phone, member.birthYear, member.gender, member.address, member.rank);
+                table.Rows.Add(member.Id, member.memberId, member.name, member.phone, member.birthYear, member.gender, member.address, member.rank);
             }
 
             membersGridView.DataSource = table;
@@ -76,14 +77,29 @@ namespace Design_Highlands
             DataGridViewRow selectedRow = membersGridView.Rows[rowIndex];
             var member = new Member(
                 id: selectedRow.Cells[0].Value.ToString(),
-                name: selectedRow.Cells[1].Value.ToString(),
-                phone: selectedRow.Cells[2].Value.ToString(),
-                birthYear: selectedRow.Cells[3].Value.ToString(),
-                gender: selectedRow.Cells[4].Value.ToString(),
-                address: selectedRow.Cells[5].Value.ToString(),
-                rank: selectedRow.Cells[6].Value.ToString()
+                memberId: selectedRow.Cells[1].Value.ToString(),
+                name: selectedRow.Cells[2].Value.ToString(),
+                phone: selectedRow.Cells[3].Value.ToString(),
+                birthYear: selectedRow.Cells[4].Value.ToString(),
+                gender: selectedRow.Cells[5].Value.ToString(),
+                address: selectedRow.Cells[6].Value.ToString(),
+                rank: selectedRow.Cells[7].Value.ToString()
                );
             return member;
+        }
+
+        private async void deleteMember(ObjectId id, IMongoCollection<BsonDocument> collection)
+        {
+            var filter = Builders<BsonDocument>.Filter.Eq("_id", id);
+            DeleteResult result = await collection.DeleteOneAsync(filter);
+            if (result.IsAcknowledged)
+            {
+                MessageBox.Show("Deleted member successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Failed to delete mem!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 
@@ -120,6 +136,51 @@ namespace Design_Highlands
             {
                 MessageBox.Show("You haven't selected any rows", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             } 
+        }
+
+
+        private void btn_createMem_Click(object sender, EventArgs e)
+        {
+            AddNewMember addMemberDialog = new AddNewMember(membersGridView);
+            addMemberDialog.ShowDialog();
+        }
+
+        private void btn_deleteMem_Click(object sender, EventArgs e)
+        {
+            if (membersGridView.SelectedRows.Count > 0)
+            {
+                DialogResult dialogResult = MessageBox.Show("Permanently remove this mem?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                switch (dialogResult)
+                {
+                    case DialogResult.Yes:
+                        // Connect to mongo client and get collection
+                        var client = new MongoClient("mongodb+srv://52000797:tQ!mTK6NW74wexq@highlandcluster.fc5jjn4.mongodb.net");
+                        var db = client.GetDatabase("highland");
+                        IMongoCollection<BsonDocument> collection = db.GetCollection<BsonDocument>("members");
+
+                        // Find selected row then get staff _id
+                        int rowIndex = membersGridView.CurrentCell.RowIndex;
+                        DataGridViewRow selectedRow = membersGridView.Rows[rowIndex];
+                        ObjectId id = ObjectId.Parse(selectedRow.Cells[0].Value.ToString());
+
+
+                        // Remove row
+                        DataTable dataTable = (DataTable)membersGridView.DataSource;
+                        DataRow row = (membersGridView.Rows[rowIndex].DataBoundItem as DataRowView).Row;
+                        dataTable.Rows.Remove(row);
+
+                        deleteMember(id, collection);
+                        break;
+                    case DialogResult.No:
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else
+            {
+                MessageBox.Show("You haven't selected any row. Please select one!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
