@@ -216,6 +216,7 @@
             this.pic_menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_menu.TabIndex = 16;
             this.pic_menu.TabStop = false;
+            this.pic_menu.Click += new System.EventHandler(this.pic_menu_Click);
             // 
             // pic_order
             // 

@@ -58,6 +58,8 @@ namespace Design_Highlands
             loginView.ShowDialog();
         }
 
+        // Events
+
         private void Home_Load(object sender, EventArgs e)
         {
 
@@ -99,6 +101,13 @@ namespace Design_Highlands
             {
                 MessageBox.Show("You don't have permission to access this field!", "Authorization", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void pic_menu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            QLMenu menuManagementView = new QLMenu(staff);
+            menuManagementView.ShowDialog();
         }
     }
 }
