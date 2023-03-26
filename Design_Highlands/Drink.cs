@@ -11,23 +11,32 @@ namespace Design_Highlands
 {
     internal class Drink
     {
-        
-        public Drink(string id, string type, string nameE, string nameV, DrinkSize price)
+
+        private string id;
+        private string type;
+        private string nameE;
+        private string nameV;
+        private DrinkSize price;
+        private string material;
+
+        public Drink(string id, string type, string nameE, string nameV, DrinkSize price, string material)
         {
-            this.Id = id;
-            this.Type = type;
-            this.NameE = nameE;
-            this.NameV = nameV;
-            this.Price = price;
+            this.id = id;
+            this.type = type;
+            this.nameE = nameE;
+            this.nameV = nameV;
+            this.price = price;
+            this.material = material;
         }
 
 
         [BsonRepresentation(BsonType.ObjectId)]
 
-        private string Id { get; set; }
-        private string Type { get; set; }
-        private string NameE { get; set; }
-        private string NameV { get; set; }
-        private DrinkSize Price { get; set; }
+        public string Id { get { return this.id; } set { this.id = value; } }
+        public string Type { get { return this.type; } set { this.type = value; } }
+        public string NameE { get { return this.nameE; } set { this.nameE = value; } }
+        public string NameV { get { return this.nameV; } set { this.nameV = value; } }
+        public DrinkSize Price { get { return this.price; } set { this.price = value; } }
+        public string Material { get { return this.material; } set { this.material = value; } }
     }
 }

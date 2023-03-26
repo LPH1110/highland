@@ -8,23 +8,26 @@ namespace Design_Highlands
 {
     internal class DrinkSize
     {
-       public DrinkSize()
+        private int s;
+        private int m;
+        private int l;
+        public DrinkSize()
         {
-            this.S = 0;
-            this.M = 0;
-            this.L = 0;
+            this.s = 0;
+            this.m = 0;
+            this.l = 0;
         }
 
         public DrinkSize(int s, int m, int l)
         {
-            this.S = s;
-            this.M = m;
-            this.L = l;
+            this.s = s;
+            this.m = m;
+            this.l = l;
         }
 
-        private int S { get; set; }
-        private int M { get; set; }
-        private int L { get; set; }
-        
+        public int S { get { return this.s; } set { this.s = value; } }
+        public int M { get { return this.m; } set { this.m = value; } }
+        public int L { get { return this.l; } set { this.l = value; } }
+
     }
 }

@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLTV));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.membersGridView = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -39,40 +38,29 @@
             this.lb_back = new System.Windows.Forms.Label();
             this.pb_back = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.btn_deleteMem = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.membersGridView = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.membersGridView)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_back)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.membersGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.membersGridView);
             this.panel2.Location = new System.Drawing.Point(2, 77);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(911, 406);
             this.panel2.TabIndex = 25;
-            // 
-            // membersGridView
-            // 
-            this.membersGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.membersGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.membersGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.membersGridView.Location = new System.Drawing.Point(3, -2);
-            this.membersGridView.Margin = new System.Windows.Forms.Padding(2);
-            this.membersGridView.Name = "membersGridView";
-            this.membersGridView.RowHeadersWidth = 51;
-            this.membersGridView.RowTemplate.Height = 24;
-            this.membersGridView.Size = new System.Drawing.Size(906, 408);
-            this.membersGridView.TabIndex = 3;
-            this.membersGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.membersGridView_CellDoubleClick);
             // 
             // panel1
             // 
@@ -173,17 +161,6 @@
             this.panel4.Size = new System.Drawing.Size(452, 79);
             this.panel4.TabIndex = 27;
             // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel3.Controls.Add(this.lb_back);
-            this.panel3.Controls.Add(this.pb_back);
-            this.panel3.Location = new System.Drawing.Point(1, 487);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(459, 81);
-            this.panel3.TabIndex = 26;
-            // 
             // btn_deleteMem
             // 
             this.btn_deleteMem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
@@ -197,6 +174,29 @@
             this.btn_deleteMem.Text = "Xóa thành viên";
             this.btn_deleteMem.UseVisualStyleBackColor = false;
             this.btn_deleteMem.Click += new System.EventHandler(this.btn_deleteMem_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel3.Controls.Add(this.lb_back);
+            this.panel3.Controls.Add(this.pb_back);
+            this.panel3.Location = new System.Drawing.Point(1, 487);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(459, 81);
+            this.panel3.TabIndex = 26;
+            // 
+            // membersGridView
+            // 
+            this.membersGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.membersGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.membersGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.membersGridView.Location = new System.Drawing.Point(-1, 6);
+            this.membersGridView.Name = "membersGridView";
+            this.membersGridView.Size = new System.Drawing.Size(914, 403);
+            this.membersGridView.TabIndex = 0;
             // 
             // QLTV
             // 
@@ -214,7 +214,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.QLTV_Load);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.membersGridView)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -222,6 +221,7 @@
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.membersGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -229,7 +229,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView membersGridView;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -240,5 +239,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btn_deleteMem;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView membersGridView;
     }
 }

@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLNV));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.staffsGridView = new System.Windows.Forms.DataGridView();
             this.btn_updateStaff = new System.Windows.Forms.Button();
             this.btn_createStaff = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -40,40 +39,26 @@
             this.btn_deleteStaff = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.staffsGridView = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.staffsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffsGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.staffsGridView);
             this.panel2.Location = new System.Drawing.Point(2, 80);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(911, 406);
             this.panel2.TabIndex = 10;
-            // 
-            // staffsGridView
-            // 
-            this.staffsGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.staffsGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.staffsGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.staffsGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.staffsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.staffsGridView.Location = new System.Drawing.Point(3, -2);
-            this.staffsGridView.Margin = new System.Windows.Forms.Padding(2);
-            this.staffsGridView.Name = "staffsGridView";
-            this.staffsGridView.RowHeadersWidth = 51;
-            this.staffsGridView.RowTemplate.Height = 24;
-            this.staffsGridView.Size = new System.Drawing.Size(906, 408);
-            this.staffsGridView.TabIndex = 3;
-            this.staffsGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.staffsGridView_CellDoubleClick);
             // 
             // btn_updateStaff
             // 
@@ -189,6 +174,18 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // staffsGridView
+            // 
+            this.staffsGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.staffsGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.staffsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.staffsGridView.Location = new System.Drawing.Point(2, 3);
+            this.staffsGridView.Name = "staffsGridView";
+            this.staffsGridView.Size = new System.Drawing.Size(910, 406);
+            this.staffsGridView.TabIndex = 0;
+            // 
             // QLNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,12 +203,12 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.QLNV_Load);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.staffsGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffsGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,7 +216,6 @@
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView staffsGridView;
         private System.Windows.Forms.Button btn_updateStaff;
         private System.Windows.Forms.Button btn_createStaff;
         private System.Windows.Forms.Label label7;
@@ -229,5 +225,6 @@
         private System.Windows.Forms.Button btn_deleteStaff;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView staffsGridView;
     }
 }

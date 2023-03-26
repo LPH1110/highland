@@ -160,5 +160,4 @@ D:\NET_projects\highland\Design_Highlands\bin\Debug\System.Security.Permissions.
 D:\NET_projects\highland\Design_Highlands\bin\Debug\System.ServiceModel.Syndication.xml
 D:\NET_projects\highland\Design_Highlands\bin\Debug\System.ServiceProcess.ServiceController.xml
 D:\NET_projects\highland\Design_Highlands\bin\Debug\System.Threading.AccessControl.xml
-D:\NET_projects\highland\Design_Highlands\obj\Debug\Design_Highlands.exe.config
 D:\NET_projects\highland\Design_Highlands\obj\Debug\Design_Highlands.csproj.Fody.CopyLocal.cache
