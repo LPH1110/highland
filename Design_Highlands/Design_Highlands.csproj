@@ -288,6 +288,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddNewDrink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewDrink.Designer.cs">
+      <DependentUpon>AddNewDrink.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddNewMember.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -348,6 +354,9 @@
     <Compile Include="UpdateStaff.Designer.cs">
       <DependentUpon>UpdateStaff.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddNewDrink.resx">
+      <DependentUpon>AddNewDrink.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddNewMember.resx">
       <DependentUpon>AddNewMember.cs</DependentUpon>
     </EmbeddedResource>

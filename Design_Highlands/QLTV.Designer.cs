@@ -197,6 +197,7 @@
             this.membersGridView.Name = "membersGridView";
             this.membersGridView.Size = new System.Drawing.Size(914, 403);
             this.membersGridView.TabIndex = 0;
+            this.membersGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.membersGridView_CellDoubleClick);
             // 
             // QLTV
             // 

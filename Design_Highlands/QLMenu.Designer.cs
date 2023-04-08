@@ -31,17 +31,18 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLMenu));
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btn_deleteMenu = new System.Windows.Forms.Button();
+            this.btn_deleteMenu = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btn_addMenu = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btn_updateMenu = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.btn_updateMenu = new System.Windows.Forms.Button();
-            this.btn_createMenu = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lb_back = new System.Windows.Forms.Label();
             this.pb_back = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.menuGridview = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.menuGridView = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbb_menuOptions = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4.SuspendLayout();
@@ -49,9 +50,10 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_back)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.menuGridview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbb_menuOptions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,10 +61,10 @@
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.Controls.Add(this.btn_deleteMenu);
-            this.panel4.Controls.Add(this.pictureBox8);
+            this.panel4.Controls.Add(this.btn_addMenu);
             this.panel4.Controls.Add(this.btn_updateMenu);
-            this.panel4.Controls.Add(this.btn_createMenu);
-            this.panel4.Location = new System.Drawing.Point(526, 488);
+            this.panel4.Controls.Add(this.pictureBox8);
+            this.panel4.Location = new System.Drawing.Point(557, 488);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(452, 79);
@@ -70,16 +72,88 @@
             // 
             // btn_deleteMenu
             // 
-            this.btn_deleteMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btn_deleteMenu.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_deleteMenu.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btn_deleteMenu.Location = new System.Drawing.Point(161, 25);
-            this.btn_deleteMenu.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_deleteMenu.Location = new System.Drawing.Point(167, 25);
             this.btn_deleteMenu.Name = "btn_deleteMenu";
-            this.btn_deleteMenu.Size = new System.Drawing.Size(126, 41);
-            this.btn_deleteMenu.TabIndex = 23;
-            this.btn_deleteMenu.Text = "Xóa";
-            this.btn_deleteMenu.UseVisualStyleBackColor = false;
+            this.btn_deleteMenu.Size = new System.Drawing.Size(125, 41);
+            this.btn_deleteMenu.StateCommon.Back.Color1 = System.Drawing.Color.Firebrick;
+            this.btn_deleteMenu.StateCommon.Back.Color2 = System.Drawing.Color.Firebrick;
+            this.btn_deleteMenu.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_deleteMenu.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btn_deleteMenu.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btn_deleteMenu.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_deleteMenu.StatePressed.Border.Color1 = System.Drawing.Color.DeepSkyBlue;
+            this.btn_deleteMenu.StatePressed.Border.Color2 = System.Drawing.Color.DeepSkyBlue;
+            this.btn_deleteMenu.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_deleteMenu.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btn_deleteMenu.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btn_deleteMenu.StateTracking.Border.Color1 = System.Drawing.Color.DeepSkyBlue;
+            this.btn_deleteMenu.StateTracking.Border.Color2 = System.Drawing.Color.DeepSkyBlue;
+            this.btn_deleteMenu.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_deleteMenu.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btn_deleteMenu.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btn_deleteMenu.TabIndex = 24;
+            this.btn_deleteMenu.Values.Text = "Xóa";
+            // 
+            // btn_addMenu
+            // 
+            this.btn_addMenu.Location = new System.Drawing.Point(298, 25);
+            this.btn_addMenu.Name = "btn_addMenu";
+            this.btn_addMenu.Size = new System.Drawing.Size(125, 41);
+            this.btn_addMenu.StateCommon.Back.Color1 = System.Drawing.Color.Firebrick;
+            this.btn_addMenu.StateCommon.Back.Color2 = System.Drawing.Color.Firebrick;
+            this.btn_addMenu.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_addMenu.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btn_addMenu.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btn_addMenu.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_addMenu.StatePressed.Border.Color1 = System.Drawing.Color.DeepSkyBlue;
+            this.btn_addMenu.StatePressed.Border.Color2 = System.Drawing.Color.DeepSkyBlue;
+            this.btn_addMenu.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_addMenu.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btn_addMenu.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btn_addMenu.StateTracking.Border.Color1 = System.Drawing.Color.DeepSkyBlue;
+            this.btn_addMenu.StateTracking.Border.Color2 = System.Drawing.Color.DeepSkyBlue;
+            this.btn_addMenu.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_addMenu.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btn_addMenu.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btn_addMenu.TabIndex = 23;
+            this.btn_addMenu.Values.Text = "Thêm";
+            this.btn_addMenu.Click += new System.EventHandler(this.btn_addMenu_Click);
+            // 
+            // btn_updateMenu
+            // 
+            this.btn_updateMenu.Location = new System.Drawing.Point(36, 25);
+            this.btn_updateMenu.Name = "btn_updateMenu";
+            this.btn_updateMenu.Size = new System.Drawing.Size(125, 41);
+            this.btn_updateMenu.StateCommon.Back.Color1 = System.Drawing.Color.Firebrick;
+            this.btn_updateMenu.StateCommon.Back.Color2 = System.Drawing.Color.Firebrick;
+            this.btn_updateMenu.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_updateMenu.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btn_updateMenu.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btn_updateMenu.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_updateMenu.StatePressed.Border.Color1 = System.Drawing.Color.DeepSkyBlue;
+            this.btn_updateMenu.StatePressed.Border.Color2 = System.Drawing.Color.DeepSkyBlue;
+            this.btn_updateMenu.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_updateMenu.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btn_updateMenu.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btn_updateMenu.StateTracking.Border.Color1 = System.Drawing.Color.DeepSkyBlue;
+            this.btn_updateMenu.StateTracking.Border.Color2 = System.Drawing.Color.DeepSkyBlue;
+            this.btn_updateMenu.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_updateMenu.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btn_updateMenu.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btn_updateMenu.TabIndex = 20;
+            this.btn_updateMenu.Values.Text = "Sửa";
             // 
             // pictureBox8
             // 
@@ -92,32 +166,6 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 22;
             this.pictureBox8.TabStop = false;
-            // 
-            // btn_updateMenu
-            // 
-            this.btn_updateMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btn_updateMenu.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_updateMenu.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btn_updateMenu.Location = new System.Drawing.Point(31, 25);
-            this.btn_updateMenu.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_updateMenu.Name = "btn_updateMenu";
-            this.btn_updateMenu.Size = new System.Drawing.Size(126, 41);
-            this.btn_updateMenu.TabIndex = 21;
-            this.btn_updateMenu.Text = "Sửa";
-            this.btn_updateMenu.UseVisualStyleBackColor = false;
-            // 
-            // btn_createMenu
-            // 
-            this.btn_createMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btn_createMenu.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_createMenu.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btn_createMenu.Location = new System.Drawing.Point(291, 25);
-            this.btn_createMenu.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_createMenu.Name = "btn_createMenu";
-            this.btn_createMenu.Size = new System.Drawing.Size(133, 41);
-            this.btn_createMenu.TabIndex = 20;
-            this.btn_createMenu.Text = "Thêm";
-            this.btn_createMenu.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -155,41 +203,65 @@
             this.pb_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_back.TabIndex = 18;
             this.pb_back.TabStop = false;
+            this.pb_back.Click += new System.EventHandler(this.pb_back_Click);
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.menuGridview);
-            this.panel2.Location = new System.Drawing.Point(1, 77);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(977, 406);
-            this.panel2.TabIndex = 25;
-            // 
-            // menuGridview
-            // 
-            this.menuGridview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.menuGridview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.menuGridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.menuGridview.Location = new System.Drawing.Point(0, 0);
-            this.menuGridview.Name = "menuGridview";
-            this.menuGridview.Size = new System.Drawing.Size(977, 406);
-            this.menuGridview.TabIndex = 0;
+            this.panel2.Controls.Add(this.menuGridView);
+            this.panel2.Location = new System.Drawing.Point(1, 82);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1008, 401);
+            this.panel2.TabIndex = 25;
+            // 
+            // menuGridView
+            // 
+            this.menuGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.menuGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.menuGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.menuGridView.Location = new System.Drawing.Point(0, 0);
+            this.menuGridView.Name = "menuGridView";
+            this.menuGridView.Size = new System.Drawing.Size(1008, 401);
+            this.menuGridView.TabIndex = 0;
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.cbb_menuOptions);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(1, -2);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(977, 80);
+            this.panel1.Size = new System.Drawing.Size(1008, 80);
             this.panel1.TabIndex = 24;
+            // 
+            // cbb_menuOptions
+            // 
+            this.cbb_menuOptions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbb_menuOptions.DropDownWidth = 152;
+            this.cbb_menuOptions.Items.AddRange(new object[] {
+            "Coffee",
+            "Tea",
+            "Phindi",
+            "Expresso",
+            "Freeze",
+            "Cake",
+            "Bread",
+            "All drinks",
+            "All foods"});
+            this.cbb_menuOptions.Location = new System.Drawing.Point(845, 24);
+            this.cbb_menuOptions.Name = "cbb_menuOptions";
+            this.cbb_menuOptions.Size = new System.Drawing.Size(152, 21);
+            this.cbb_menuOptions.TabIndex = 2;
+            this.cbb_menuOptions.Text = "All drinks";
             // 
             // label1
             // 
@@ -217,7 +289,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(979, 566);
+            this.ClientSize = new System.Drawing.Size(1010, 566);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -233,10 +305,11 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_back)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.menuGridview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbb_menuOptions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -246,8 +319,6 @@
 
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Button btn_updateMenu;
-        private System.Windows.Forms.Button btn_createMenu;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lb_back;
         private System.Windows.Forms.PictureBox pb_back;
@@ -255,8 +326,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btn_deleteMenu;
         private System.Windows.Forms.BindingSource bindingSource1;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView menuGridview;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView menuGridView;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_updateMenu;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_deleteMenu;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_addMenu;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cbb_menuOptions;
     }
 }

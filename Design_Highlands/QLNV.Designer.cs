@@ -185,6 +185,7 @@
             this.staffsGridView.Name = "staffsGridView";
             this.staffsGridView.Size = new System.Drawing.Size(910, 406);
             this.staffsGridView.TabIndex = 0;
+            this.staffsGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.staffsGridView_CellDoubleClick);
             // 
             // QLNV
             // 
