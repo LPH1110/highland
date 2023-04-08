@@ -78,7 +78,7 @@ namespace Design_Highlands
             if (drinkOptions.Contains(option))
             {
                 Drink selectedDrink = getCurrentSelectedDrink();
-                AddNewDrink addNewDrinkView = new AddNewDrink(selectedDrink, option);
+                AddNewDrink addNewDrinkView = new AddNewDrink(selectedDrink, option, menuGridView);
                 addNewDrinkView.ShowDialog();
 
             }

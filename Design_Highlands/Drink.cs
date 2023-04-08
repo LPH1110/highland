@@ -18,7 +18,6 @@ namespace Design_Highlands
         private string nameV;
         private DrinkSize price;
         private string material;
-
         public Drink(string id, string type, string nameE, string nameV, DrinkSize price, string material)
         {
             this.id = id;

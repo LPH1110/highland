@@ -48,7 +48,7 @@
             // 
             this.txt_cancelCreateMember.BackColor = System.Drawing.Color.DarkGray;
             this.txt_cancelCreateMember.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cancelCreateMember.Location = new System.Drawing.Point(168, 365);
+            this.txt_cancelCreateMember.Location = new System.Drawing.Point(168, 316);
             this.txt_cancelCreateMember.Margin = new System.Windows.Forms.Padding(2);
             this.txt_cancelCreateMember.Name = "txt_cancelCreateMember";
             this.txt_cancelCreateMember.Size = new System.Drawing.Size(89, 37);
@@ -60,7 +60,7 @@
             // 
             this.btn_confirmCreateMember.BackColor = System.Drawing.Color.DarkGray;
             this.btn_confirmCreateMember.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_confirmCreateMember.Location = new System.Drawing.Point(71, 365);
+            this.btn_confirmCreateMember.Location = new System.Drawing.Point(71, 316);
             this.btn_confirmCreateMember.Margin = new System.Windows.Forms.Padding(2);
             this.btn_confirmCreateMember.Name = "btn_confirmCreateMember";
             this.btn_confirmCreateMember.Size = new System.Drawing.Size(93, 37);
@@ -73,7 +73,7 @@
             // 
             this.rdbtn_femaleMem.AutoSize = true;
             this.rdbtn_femaleMem.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbtn_femaleMem.Location = new System.Drawing.Point(215, 136);
+            this.rdbtn_femaleMem.Location = new System.Drawing.Point(215, 72);
             this.rdbtn_femaleMem.Margin = new System.Windows.Forms.Padding(2);
             this.rdbtn_femaleMem.Name = "rdbtn_femaleMem";
             this.rdbtn_femaleMem.Size = new System.Drawing.Size(42, 18);
@@ -86,7 +86,7 @@
             // 
             this.rdbtn_maleMem.AutoSize = true;
             this.rdbtn_maleMem.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbtn_maleMem.Location = new System.Drawing.Point(144, 136);
+            this.rdbtn_maleMem.Location = new System.Drawing.Point(144, 72);
             this.rdbtn_maleMem.Margin = new System.Windows.Forms.Padding(2);
             this.rdbtn_maleMem.Name = "rdbtn_maleMem";
             this.rdbtn_maleMem.Size = new System.Drawing.Size(53, 18);
@@ -99,7 +99,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(11, 137);
+            this.label8.Location = new System.Drawing.Point(11, 73);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(72, 17);
@@ -109,7 +109,7 @@
             // txt_addressMem
             // 
             this.txt_addressMem.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_addressMem.Location = new System.Drawing.Point(144, 267);
+            this.txt_addressMem.Location = new System.Drawing.Point(144, 203);
             this.txt_addressMem.Margin = new System.Windows.Forms.Padding(2);
             this.txt_addressMem.Multiline = true;
             this.txt_addressMem.Name = "txt_addressMem";
@@ -120,7 +120,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(11, 267);
+            this.label7.Location = new System.Drawing.Point(11, 203);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 17);
@@ -130,7 +130,7 @@
             // txt_phoneMem
             // 
             this.txt_phoneMem.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_phoneMem.Location = new System.Drawing.Point(144, 219);
+            this.txt_phoneMem.Location = new System.Drawing.Point(144, 155);
             this.txt_phoneMem.Margin = new System.Windows.Forms.Padding(2);
             this.txt_phoneMem.Multiline = true;
             this.txt_phoneMem.Name = "txt_phoneMem";
@@ -141,7 +141,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(11, 219);
+            this.label3.Location = new System.Drawing.Point(11, 155);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 17);
@@ -151,7 +151,7 @@
             // txt_birthYearMem
             // 
             this.txt_birthYearMem.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_birthYearMem.Location = new System.Drawing.Point(144, 173);
+            this.txt_birthYearMem.Location = new System.Drawing.Point(144, 109);
             this.txt_birthYearMem.Margin = new System.Windows.Forms.Padding(2);
             this.txt_birthYearMem.Multiline = true;
             this.txt_birthYearMem.Name = "txt_birthYearMem";
@@ -162,7 +162,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 173);
+            this.label2.Location = new System.Drawing.Point(11, 109);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 17);
@@ -173,7 +173,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 84);
+            this.label1.Location = new System.Drawing.Point(11, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 17);
@@ -183,7 +183,7 @@
             // txt_nameMem
             // 
             this.txt_nameMem.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nameMem.Location = new System.Drawing.Point(144, 84);
+            this.txt_nameMem.Location = new System.Drawing.Point(144, 20);
             this.txt_nameMem.Margin = new System.Windows.Forms.Padding(2);
             this.txt_nameMem.Multiline = true;
             this.txt_nameMem.Name = "txt_nameMem";
@@ -204,7 +204,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(337, 413);
+            this.ClientSize = new System.Drawing.Size(343, 383);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_nameMem);
             this.Controls.Add(this.txt_cancelCreateMember);
