@@ -154,6 +154,7 @@
             this.label1.Size = new System.Drawing.Size(103, 32);
             this.label1.TabIndex = 15;
             this.label1.Text = "ĐẶT MÓN";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pic_statistics
             // 
@@ -229,6 +230,7 @@
             this.pic_order.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_order.TabIndex = 14;
             this.pic_order.TabStop = false;
+            this.pic_order.Click += new System.EventHandler(this.pic_order_Click);
             // 
             // pictureBox7
             // 

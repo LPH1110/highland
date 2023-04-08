@@ -58,6 +58,13 @@ namespace Design_Highlands
             loginView.ShowDialog();
         }
 
+        private void showOrderScreen()
+        {
+            this.Hide();
+            OrderScreen orderScreen = new OrderScreen();
+            orderScreen.ShowDialog();
+        }
+
         // Events
 
         private void Home_Load(object sender, EventArgs e)
@@ -108,6 +115,16 @@ namespace Design_Highlands
             this.Hide();
             QLMenu menuManagementView = new QLMenu(staff);
             menuManagementView.ShowDialog();
+        }
+
+        private void pic_order_Click(object sender, EventArgs e)
+        {
+            showOrderScreen();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            showOrderScreen();
         }
     }
 }
