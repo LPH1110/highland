@@ -348,6 +348,12 @@
     </Compile>
     <Compile Include="Member.cs" />
     <Compile Include="Staff.cs" />
+    <Compile Include="UpdateDrink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateDrink.Designer.cs">
+      <DependentUpon>UpdateDrink.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateMember.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -392,6 +398,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QLTV.resx">
       <DependentUpon>QLTV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateDrink.resx">
+      <DependentUpon>UpdateDrink.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateMember.resx">
       <DependentUpon>UpdateMember.cs</DependentUpon>

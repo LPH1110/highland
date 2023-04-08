@@ -35,15 +35,15 @@
             this.tb_drinkNameEng = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.tb_drinkPrice = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.pb_drinkImage = new System.Windows.Forms.PictureBox();
-            this.cb_drinkSizeS = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
-            this.cb_drinkSizeM = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
-            this.cb_drinkSizeL = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_addNewDrink = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_cancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.openDrinkFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.tb_drinkNameViet = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.rdb_drinkSizeS = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.rdb_drinkSizeL = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.rdb_drinkSizeM = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pb_drinkImage)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -97,6 +97,7 @@
             this.tb_drinkPrice.Name = "tb_drinkPrice";
             this.tb_drinkPrice.Size = new System.Drawing.Size(187, 20);
             this.tb_drinkPrice.TabIndex = 5;
+            this.tb_drinkPrice.TextChanged += new System.EventHandler(this.tb_drinkPrice_TextChanged);
             // 
             // pb_drinkImage
             // 
@@ -108,30 +109,6 @@
             this.pb_drinkImage.TabIndex = 6;
             this.pb_drinkImage.TabStop = false;
             this.pb_drinkImage.Click += new System.EventHandler(this.pb_drinkImage_Click);
-            // 
-            // cb_drinkSizeS
-            // 
-            this.cb_drinkSizeS.Location = new System.Drawing.Point(162, 114);
-            this.cb_drinkSizeS.Name = "cb_drinkSizeS";
-            this.cb_drinkSizeS.Size = new System.Drawing.Size(30, 20);
-            this.cb_drinkSizeS.TabIndex = 7;
-            this.cb_drinkSizeS.Values.Text = "S";
-            // 
-            // cb_drinkSizeM
-            // 
-            this.cb_drinkSizeM.Location = new System.Drawing.Point(208, 114);
-            this.cb_drinkSizeM.Name = "cb_drinkSizeM";
-            this.cb_drinkSizeM.Size = new System.Drawing.Size(35, 20);
-            this.cb_drinkSizeM.TabIndex = 8;
-            this.cb_drinkSizeM.Values.Text = "M";
-            // 
-            // cb_drinkSizeL
-            // 
-            this.cb_drinkSizeL.Location = new System.Drawing.Point(258, 114);
-            this.cb_drinkSizeL.Name = "cb_drinkSizeL";
-            this.cb_drinkSizeL.Size = new System.Drawing.Size(29, 20);
-            this.cb_drinkSizeL.TabIndex = 9;
-            this.cb_drinkSizeL.Values.Text = "L";
             // 
             // tableLayoutPanel1
             // 
@@ -192,17 +169,44 @@
             this.kryptonLabel5.TabIndex = 11;
             this.kryptonLabel5.Values.Text = "Tên món (Vietnamese)";
             // 
+            // rdb_drinkSizeS
+            // 
+            this.rdb_drinkSizeS.Location = new System.Drawing.Point(162, 114);
+            this.rdb_drinkSizeS.Name = "rdb_drinkSizeS";
+            this.rdb_drinkSizeS.Size = new System.Drawing.Size(29, 20);
+            this.rdb_drinkSizeS.TabIndex = 13;
+            this.rdb_drinkSizeS.Values.Text = "S";
+            this.rdb_drinkSizeS.CheckedChanged += new System.EventHandler(this.rdb_drinkSizeS_CheckedChanged);
+            // 
+            // rdb_drinkSizeL
+            // 
+            this.rdb_drinkSizeL.Location = new System.Drawing.Point(262, 114);
+            this.rdb_drinkSizeL.Name = "rdb_drinkSizeL";
+            this.rdb_drinkSizeL.Size = new System.Drawing.Size(28, 20);
+            this.rdb_drinkSizeL.TabIndex = 14;
+            this.rdb_drinkSizeL.Values.Text = "L";
+            this.rdb_drinkSizeL.CheckedChanged += new System.EventHandler(this.rdb_drinkSizeL_CheckedChanged);
+            // 
+            // rdb_drinkSizeM
+            // 
+            this.rdb_drinkSizeM.Location = new System.Drawing.Point(209, 114);
+            this.rdb_drinkSizeM.Name = "rdb_drinkSizeM";
+            this.rdb_drinkSizeM.Size = new System.Drawing.Size(34, 20);
+            this.rdb_drinkSizeM.TabIndex = 15;
+            this.rdb_drinkSizeM.Values.Text = "M";
+            this.rdb_drinkSizeM.CheckedChanged += new System.EventHandler(this.rdb_drinkSizeM_CheckedChanged);
+            // 
             // AddNewDrink
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(375, 492);
+            this.Controls.Add(this.rdb_drinkSizeM);
+            this.Controls.Add(this.rdb_drinkSizeL);
+            this.Controls.Add(this.rdb_drinkSizeS);
             this.Controls.Add(this.tb_drinkNameViet);
             this.Controls.Add(this.kryptonLabel5);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.cb_drinkSizeL);
-            this.Controls.Add(this.cb_drinkSizeM);
-            this.Controls.Add(this.cb_drinkSizeS);
             this.Controls.Add(this.pb_drinkImage);
             this.Controls.Add(this.tb_drinkPrice);
             this.Controls.Add(this.tb_drinkNameEng);
@@ -228,14 +232,14 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox tb_drinkNameEng;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox tb_drinkPrice;
         private System.Windows.Forms.PictureBox pb_drinkImage;
-        private ComponentFactory.Krypton.Toolkit.KryptonCheckBox cb_drinkSizeS;
-        private ComponentFactory.Krypton.Toolkit.KryptonCheckBox cb_drinkSizeM;
-        private ComponentFactory.Krypton.Toolkit.KryptonCheckBox cb_drinkSizeL;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btn_addNewDrink;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btn_cancel;
         private System.Windows.Forms.OpenFileDialog openDrinkFileDialog;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox tb_drinkNameViet;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel5;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdb_drinkSizeS;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdb_drinkSizeL;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdb_drinkSizeM;
     }
 }

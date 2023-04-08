@@ -97,6 +97,7 @@
             this.btn_deleteMenu.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btn_deleteMenu.TabIndex = 24;
             this.btn_deleteMenu.Values.Text = "Xóa";
+            this.btn_deleteMenu.Click += new System.EventHandler(this.btn_deleteMenu_Click);
             // 
             // btn_addMenu
             // 
@@ -154,6 +155,7 @@
             this.btn_updateMenu.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btn_updateMenu.TabIndex = 20;
             this.btn_updateMenu.Values.Text = "Sửa";
+            this.btn_updateMenu.Click += new System.EventHandler(this.btn_updateMenu_Click);
             // 
             // pictureBox8
             // 
@@ -228,6 +230,7 @@
             this.menuGridView.Name = "menuGridView";
             this.menuGridView.Size = new System.Drawing.Size(1008, 401);
             this.menuGridView.TabIndex = 0;
+            this.menuGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.menuGridView_CellDoubleClick);
             // 
             // panel1
             // 
@@ -244,8 +247,7 @@
             // 
             // cbb_menuOptions
             // 
-            this.cbb_menuOptions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbb_menuOptions.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbb_menuOptions.DropDownWidth = 152;
             this.cbb_menuOptions.Items.AddRange(new object[] {
             "Coffee",

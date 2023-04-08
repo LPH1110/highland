@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CloudinaryDotNet.Actions;
 using CloudinaryDotNet;
+using ZstdSharp.Unsafe;
 
 namespace Design_Highlands
 {
@@ -20,6 +21,9 @@ namespace Design_Highlands
         Drink drink;
         string option;
         string filePath;
+        int priceS;
+        int priceM;
+        int priceL;
         DataGridView menuGridView;
         public AddNewDrink()
         {
@@ -32,6 +36,9 @@ namespace Design_Highlands
             this.drink = drink;
             this.option = option;
             this.menuGridView = menuGridView;
+            this.priceS = 0;
+            this.priceM = 0;
+            this.priceL = 0;
         }
 
         // Event Handlers
@@ -89,8 +96,8 @@ namespace Design_Highlands
                 var _id = ObjectId.GenerateNewId();
 
                 // Upload picture if exists
-                
-                var cloudinary = new Cloudinary(new Account("dzzv49yec", "135785993356753", "n8KzEThKCgPBGHuk3gFPnQPsvx4"));
+
+                /* var cloudinary = new Cloudinary(new Account("dzzv49yec", "135785993356753", "n8KzEThKCgPBGHuk3gFPnQPsvx4"));
 
                 // Upload
                 var uploadParams = new ImageUploadParams()
@@ -100,20 +107,22 @@ namespace Design_Highlands
                 };
 
                 var uploadResult = cloudinary.Upload(uploadParams);
+                */
 
                 // Create BsonDocument
-                var document = new BsonDocument
-                {
-                    {"_id", _id },
-                    { "Type", option != "All drinks" ? option : "" },
-                    { "NameE", tb_drinkNameEng.Text },
-                    { "NameV", tb_drinkNameViet.Text },
-                    { "Thumbnail", uploadResult.SecureUrl.ToString() },
-                };
+                var document = new Drink(
+                    id: _id.ToString(),
+                    type: option != "All drinks" ? option : "",
+                    nameE: tb_drinkNameEng.Text,
+                    nameV: tb_drinkNameViet.Text,
+                    price: new DrinkSize(this.priceS, this.priceM, this.priceL),
+                    material: ""
+                    );
+                
 
 
                 // write staff to database
-                createDrink(document, collection);
+                createDrink(document.ToBsonDocument(), collection);
 
                 Drink drink = findDrinkById(_id, collection);
                 if (drink != null)
@@ -153,5 +162,51 @@ namespace Design_Highlands
         {
             this.Hide();
         }
+
+        private void tb_drinkPrice_TextChanged(object sender, EventArgs e)
+        {
+            var value = tb_drinkPrice.Text;
+            int price;
+            var isNumeric = int.TryParse(value, out price);
+            if (isNumeric)
+            {
+                if (rdb_drinkSizeS.Checked)
+                {
+                    this.priceS = Int32.Parse(value);
+                } else if (rdb_drinkSizeM.Checked)
+                {
+                    this.priceM = Int32.Parse(value);
+                } else if (rdb_drinkSizeL.Checked)
+                {
+                    this.priceL = Int32.Parse(value);
+                }
+            } else
+            {
+                MessageBox.Show("Price must be number!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void rdb_drinkSizeS_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdb_drinkSizeS.Checked)
+            {
+                tb_drinkPrice.Text = this.priceS.ToString();
+            }
+        }
+        private void rdb_drinkSizeM_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdb_drinkSizeM.Checked)
+            {
+                tb_drinkPrice.Text = this.priceM.ToString();
+            }
+        }
+        private void rdb_drinkSizeL_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdb_drinkSizeL.Checked)
+            {
+                tb_drinkPrice.Text = this.priceL.ToString();
+            }
+        }
+
     }
 }

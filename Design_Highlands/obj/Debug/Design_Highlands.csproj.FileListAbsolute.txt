@@ -164,3 +164,4 @@ D:\NET_projects\highland\Design_Highlands\obj\Debug\Design_Highlands.csproj.Fody
 D:\NET_projects\highland\Design_Highlands\obj\Debug\Design_Highlands.AddNewDrink.resources
 D:\NET_projects\highland\Design_Highlands\bin\Debug\CloudinaryDotNet.xml
 D:\NET_projects\highland\Design_Highlands\bin\Debug\System.Text.Encodings.Web.xml
+D:\NET_projects\highland\Design_Highlands\obj\Debug\Design_Highlands.UpdateDrink.resources
