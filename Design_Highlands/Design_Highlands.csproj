@@ -294,29 +294,44 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddNewDrink.cs">
+    <Compile Include="components\FoodDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\FoodDetail.Designer.cs">
+      <DependentUpon>FoodDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="components\FoodWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\FoodWidget.Designer.cs">
+      <DependentUpon>FoodWidget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="models\Food.cs" />
+    <Compile Include="models\InvoiceItem.cs" />
+    <Compile Include="views\dialogs\AddNewDrink.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddNewDrink.Designer.cs">
+    <Compile Include="views\dialogs\AddNewDrink.Designer.cs">
       <DependentUpon>AddNewDrink.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddNewMember.cs">
+    <Compile Include="views\dialogs\AddNewMember.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddNewMember.Designer.cs">
+    <Compile Include="views\dialogs\AddNewMember.Designer.cs">
       <DependentUpon>AddNewMember.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddNewStaff.cs">
+    <Compile Include="views\dialogs\AddNewStaff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddNewStaff.Designer.cs">
+    <Compile Include="views\dialogs\AddNewStaff.Designer.cs">
       <DependentUpon>AddNewStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="components\DrinkDetail.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="components\DrinkDetail.Designer.cs">
+    <Compile Include="components\.Designer.cs">
       <DependentUpon>DrinkDetail.cs</DependentUpon>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="components\DrinkWidget.cs">
       <SubType>UserControl</SubType>
@@ -324,79 +339,85 @@
     <Compile Include="components\DrinkWidget.Designer.cs">
       <DependentUpon>DrinkWidget.cs</DependentUpon>
     </Compile>
-    <Compile Include="Drink.cs" />
-    <Compile Include="DrinkOption.cs">
+    <Compile Include="models\Drink.cs" />
+    <Compile Include="views\dialogs\DrinkOption.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DrinkOption.Designer.cs">
+    <Compile Include="views\dialogs\DrinkOption.Designer.cs">
       <DependentUpon>DrinkOption.cs</DependentUpon>
     </Compile>
-    <Compile Include="DrinkSize.cs" />
-    <Compile Include="Home.cs">
+    <Compile Include="models\DrinkSize.cs" />
+    <Compile Include="views\Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.cs">
+    <Compile Include="views\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="views\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="views\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrderScreen.cs">
+    <Compile Include="views\OrderScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OrderScreen.Designer.cs">
+    <Compile Include="views\OrderScreen.Designer.cs">
       <DependentUpon>OrderScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QLMenu.cs">
+    <Compile Include="views\QLMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QLMenu.Designer.cs">
+    <Compile Include="views\QLMenu.Designer.cs">
       <DependentUpon>QLMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLNV.cs">
+    <Compile Include="views\QLNV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QLNV.Designer.cs">
+    <Compile Include="views\QLNV.Designer.cs">
       <DependentUpon>QLNV.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLTV.cs">
+    <Compile Include="views\QLTV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QLTV.Designer.cs">
+    <Compile Include="views\QLTV.Designer.cs">
       <DependentUpon>QLTV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Member.cs" />
-    <Compile Include="Staff.cs" />
-    <Compile Include="UpdateDrink.cs">
+    <Compile Include="models\Member.cs" />
+    <Compile Include="models\Staff.cs" />
+    <Compile Include="views\dialogs\UpdateDrink.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateDrink.Designer.cs">
+    <Compile Include="views\dialogs\UpdateDrink.Designer.cs">
       <DependentUpon>UpdateDrink.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateMember.cs">
+    <Compile Include="views\dialogs\UpdateMember.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateMember.Designer.cs">
+    <Compile Include="views\dialogs\UpdateMember.Designer.cs">
       <DependentUpon>UpdateMember.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateStaff.cs">
+    <Compile Include="views\dialogs\UpdateStaff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateStaff.Designer.cs">
+    <Compile Include="views\dialogs\UpdateStaff.Designer.cs">
       <DependentUpon>UpdateStaff.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddNewDrink.resx">
+    <EmbeddedResource Include="components\FoodDetail.resx">
+      <DependentUpon>FoodDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\FoodWidget.resx">
+      <DependentUpon>FoodWidget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\dialogs\AddNewDrink.resx">
       <DependentUpon>AddNewDrink.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddNewMember.resx">
+    <EmbeddedResource Include="views\dialogs\AddNewMember.resx">
       <DependentUpon>AddNewMember.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddNewStaff.resx">
+    <EmbeddedResource Include="views\dialogs\AddNewStaff.resx">
       <DependentUpon>AddNewStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="components\DrinkDetail.resx">
@@ -405,16 +426,16 @@
     <EmbeddedResource Include="components\DrinkWidget.resx">
       <DependentUpon>DrinkWidget.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DrinkOption.resx">
+    <EmbeddedResource Include="views\dialogs\DrinkOption.resx">
       <DependentUpon>DrinkOption.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
+    <EmbeddedResource Include="views\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrderScreen.resx">
+    <EmbeddedResource Include="views\OrderScreen.resx">
       <DependentUpon>OrderScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -426,22 +447,22 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="QLMenu.resx">
+    <EmbeddedResource Include="views\QLMenu.resx">
       <DependentUpon>QLMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLNV.resx">
+    <EmbeddedResource Include="views\QLNV.resx">
       <DependentUpon>QLNV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLTV.resx">
+    <EmbeddedResource Include="views\QLTV.resx">
       <DependentUpon>QLTV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateDrink.resx">
+    <EmbeddedResource Include="views\dialogs\UpdateDrink.resx">
       <DependentUpon>UpdateDrink.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateMember.resx">
+    <EmbeddedResource Include="views\dialogs\UpdateMember.resx">
       <DependentUpon>UpdateMember.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateStaff.resx">
+    <EmbeddedResource Include="views\dialogs\UpdateStaff.resx">
       <DependentUpon>UpdateStaff.cs</DependentUpon>
     </EmbeddedResource>
     <None Include=".editorconfig" />

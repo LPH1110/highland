@@ -1,0 +1,89 @@
+[{
+  "_id": {
+    "$oid": "641692ea75c7e4dc468c07ba"
+  },
+  "NameE": "Pate",
+  "NameV": "Patê",
+  "Type": "bread",
+  "Price": 19000
+},{
+  "_id": {
+    "$oid": "6416938475c7e4dc468c07bb"
+  },
+  "NameE": "Chicken & Cheese",
+  "NameV": "Gà Phô Mai",
+  "Type": "bread",
+  "Price": 19000
+},{
+  "_id": {
+    "$oid": "641693ab75c7e4dc468c07bc"
+  },
+  "NameE": "Banana Cake",
+  "NameV": "Bánh Chuối",
+  "Type": "cake",
+  "Price": 29000
+},{
+  "_id": {
+    "$oid": "6416945275c7e4dc468c07bd"
+  },
+  "NameE": "Cocoa Mousse",
+  "NameV": "Mousse Cacao",
+  "Type": "cake",
+  "Price": 35000
+},{
+  "_id": {
+    "$oid": "6416947b75c7e4dc468c07be"
+  },
+  "NameE": "Passion Fruit Cheese Cake",
+  "NameV": "Phô Mai Chanh Dây",
+  "Type": "cake",
+  "Price": 29000
+},{
+  "_id": {
+    "$oid": "641696ba75c7e4dc468c07bf"
+  },
+  "NameE": "Green Tea Cheese Cake",
+  "NameV": "Phô Mai Trà Xanh",
+  "Type": "cake",
+  "Price": 35000
+},{
+  "_id": {
+    "$oid": "641696d875c7e4dc468c07c0"
+  },
+  "NameE": "Coffee Cheese Cake",
+  "NameV": "Phô Mai Cà Phê",
+  "Type": "cake",
+  "Price": 29000
+},{
+  "_id": {
+    "$oid": "641696f575c7e4dc468c07c1"
+  },
+  "NameE": "Caramel Cheese Cake",
+  "NameV": "Phô Mai Caramel",
+  "Type": "cake",
+  "Price": 35000
+},{
+  "_id": {
+    "$oid": "6416972e75c7e4dc468c07c2"
+  },
+  "NameE": "Tiramisu Cake",
+  "NameV": "Tiramisu",
+  "Type": "cake",
+  "Price": 35000
+},{
+  "_id": {
+    "$oid": "641697a075c7e4dc468c07c3"
+  },
+  "NameE": "Chocolate Highlands Cake",
+  "NameV": "Sô-Cô-La Highlands",
+  "Type": "cake",
+  "Price": 35000
+},{
+  "_id": {
+    "$oid": "641697bc75c7e4dc468c07c4"
+  },
+  "NameE": "Peach Mousse",
+  "NameV": "Mousse Đào",
+  "Type": "cake",
+  "Price": 35000
+}]

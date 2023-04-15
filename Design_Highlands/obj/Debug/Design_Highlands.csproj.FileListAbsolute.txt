@@ -239,3 +239,8 @@ D:\NET_projects\highland\Design_Highlands\obj\Debug\Design_Highlands.OrderScreen
 D:\NET_projects\highland\Design_Highlands\obj\Debug\Design_Highlands.components.DrinkWidget.resources
 D:\NET_projects\highland\Design_Highlands\obj\Debug\Design_Highlands.components.DrinkDetail.resources
 D:\NET_projects\highland\Design_Highlands\obj\Debug\Design_Highlands.DrinkOption.resources
+C:\highland\Design_Highlands\obj\Debug\Design_Highlands.components.DrinkDetail.resources
+C:\highland\Design_Highlands\obj\Debug\Design_Highlands.components.DrinkWidget.resources
+C:\highland\Design_Highlands\obj\Debug\Design_Highlands.DrinkOption.resources
+C:\highland\Design_Highlands\obj\Debug\Design_Highlands.components.FoodWidget.resources
+C:\highland\Design_Highlands\obj\Debug\Design_Highlands.components.FoodDetail.resources

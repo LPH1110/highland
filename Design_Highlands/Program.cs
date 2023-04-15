@@ -16,12 +16,6 @@ namespace Design_Highlands
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
-            //Application.Run(new Home());
-            //Application.Run(new QLNV());
-            //Application.Run(new QLMenu());
-            //Application.Run(new QLTV());
-            //Application.Run(new AddNewStaff());
-            //Application.Run(new AddNewMember());
 
 
 
