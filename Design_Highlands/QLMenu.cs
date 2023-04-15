@@ -116,7 +116,7 @@ namespace Design_Highlands
         private void backToHome()
         {
             this.Hide();
-            Home homeView = new Home(staff);
+            Home homeView = new Home(this.staff);
             homeView.ShowDialog();
         }
 

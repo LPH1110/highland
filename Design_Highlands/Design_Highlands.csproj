@@ -312,7 +312,25 @@
     <Compile Include="AddNewStaff.Designer.cs">
       <DependentUpon>AddNewStaff.cs</DependentUpon>
     </Compile>
+    <Compile Include="components\DrinkDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\DrinkDetail.Designer.cs">
+      <DependentUpon>DrinkDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="components\DrinkWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\DrinkWidget.Designer.cs">
+      <DependentUpon>DrinkWidget.cs</DependentUpon>
+    </Compile>
     <Compile Include="Drink.cs" />
+    <Compile Include="DrinkOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrinkOption.Designer.cs">
+      <DependentUpon>DrinkOption.cs</DependentUpon>
+    </Compile>
     <Compile Include="DrinkSize.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -380,6 +398,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddNewStaff.resx">
       <DependentUpon>AddNewStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\DrinkDetail.resx">
+      <DependentUpon>DrinkDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\DrinkWidget.resx">
+      <DependentUpon>DrinkWidget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrinkOption.resx">
+      <DependentUpon>DrinkOption.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

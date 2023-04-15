@@ -61,7 +61,7 @@ namespace Design_Highlands
         private void showOrderScreen()
         {
             this.Hide();
-            OrderScreen orderScreen = new OrderScreen();
+            OrderScreen orderScreen = new OrderScreen(this.staff);
             orderScreen.ShowDialog();
         }
 

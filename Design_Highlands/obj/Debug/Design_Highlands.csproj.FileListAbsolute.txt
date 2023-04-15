@@ -235,3 +235,7 @@ C:\highland\Design_Highlands\obj\Debug\Design_Highlands.csproj.CopyComplete
 C:\highland\Design_Highlands\obj\Debug\Design_Highlands.exe
 C:\highland\Design_Highlands\obj\Debug\Design_Highlands.pdb
 C:\highland\Design_Highlands\obj\Debug\Design_Highlands.OrderScreen.resources
+D:\NET_projects\highland\Design_Highlands\obj\Debug\Design_Highlands.OrderScreen.resources
+D:\NET_projects\highland\Design_Highlands\obj\Debug\Design_Highlands.components.DrinkWidget.resources
+D:\NET_projects\highland\Design_Highlands\obj\Debug\Design_Highlands.components.DrinkDetail.resources
+D:\NET_projects\highland\Design_Highlands\obj\Debug\Design_Highlands.DrinkOption.resources

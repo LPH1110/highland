@@ -112,6 +112,8 @@ namespace Design_Highlands
         private void Login_Load(object sender, EventArgs e)
         {
             txt_username.Focus();
+            txt_username.Text = "admin";
+            txt_password.Text = "11102002";
         }
 
         private void btn_cancelLogin_Click(object sender, EventArgs e)

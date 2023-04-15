@@ -37,17 +37,18 @@
             this.btn_coffee = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_food = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_drink = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.pb_back = new System.Windows.Forms.PictureBox();
-            this.lb_back = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_payment = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.dd_orderType = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.flp_bill = new System.Windows.Forms.FlowLayoutPanel();
+            this.pb_back = new System.Windows.Forms.PictureBox();
+            this.lb_back = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_back)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dd_orderType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_back)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -90,10 +91,12 @@
             this.flp_menu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.flp_menu.AutoScroll = true;
             this.flp_menu.Location = new System.Drawing.Point(3, 3);
             this.flp_menu.Name = "flp_menu";
             this.flp_menu.Size = new System.Drawing.Size(583, 315);
             this.flp_menu.TabIndex = 0;
+            this.flp_menu.Paint += new System.Windows.Forms.PaintEventHandler(this.flp_menu_Paint);
             // 
             // tableLayoutPanel2
             // 
@@ -153,35 +156,6 @@
             this.btn_drink.TabIndex = 0;
             this.btn_drink.Values.Text = "Thức uống";
             // 
-            // pb_back
-            // 
-            this.pb_back.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pb_back.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pb_back.Image = ((System.Drawing.Image)(resources.GetObject("pb_back.Image")));
-            this.pb_back.Location = new System.Drawing.Point(12, 414);
-            this.pb_back.Margin = new System.Windows.Forms.Padding(2);
-            this.pb_back.Name = "pb_back";
-            this.pb_back.Size = new System.Drawing.Size(29, 18);
-            this.pb_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_back.TabIndex = 20;
-            this.pb_back.TabStop = false;
-            this.pb_back.Click += new System.EventHandler(this.pb_back_Click);
-            // 
-            // lb_back
-            // 
-            this.lb_back.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lb_back.AutoSize = true;
-            this.lb_back.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_back.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
-            this.lb_back.ForeColor = System.Drawing.Color.Black;
-            this.lb_back.Location = new System.Drawing.Point(45, 414);
-            this.lb_back.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_back.Name = "lb_back";
-            this.lb_back.Size = new System.Drawing.Size(58, 17);
-            this.lb_back.TabIndex = 21;
-            this.lb_back.Text = "Trở về";
-            this.lb_back.Click += new System.EventHandler(this.lb_back_Click);
-            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -191,6 +165,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Controls.Add(this.btn_payment, 0, 3);
             this.tableLayoutPanel4.Controls.Add(this.dd_orderType, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.flp_bill, 0, 2);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(600, 4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 4;
@@ -228,6 +203,46 @@
             this.dd_orderType.TabIndex = 1;
             this.dd_orderType.Text = "Loại đơn";
             // 
+            // flp_bill
+            // 
+            this.flp_bill.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flp_bill.AutoScroll = true;
+            this.flp_bill.Location = new System.Drawing.Point(3, 28);
+            this.flp_bill.Name = "flp_bill";
+            this.flp_bill.Size = new System.Drawing.Size(166, 286);
+            this.flp_bill.TabIndex = 2;
+            // 
+            // pb_back
+            // 
+            this.pb_back.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pb_back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pb_back.Image = ((System.Drawing.Image)(resources.GetObject("pb_back.Image")));
+            this.pb_back.Location = new System.Drawing.Point(12, 414);
+            this.pb_back.Margin = new System.Windows.Forms.Padding(2);
+            this.pb_back.Name = "pb_back";
+            this.pb_back.Size = new System.Drawing.Size(29, 18);
+            this.pb_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_back.TabIndex = 20;
+            this.pb_back.TabStop = false;
+            this.pb_back.Click += new System.EventHandler(this.pb_back_Click);
+            // 
+            // lb_back
+            // 
+            this.lb_back.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lb_back.AutoSize = true;
+            this.lb_back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lb_back.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
+            this.lb_back.ForeColor = System.Drawing.Color.Black;
+            this.lb_back.Location = new System.Drawing.Point(45, 414);
+            this.lb_back.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_back.Name = "lb_back";
+            this.lb_back.Size = new System.Drawing.Size(58, 17);
+            this.lb_back.TabIndex = 21;
+            this.lb_back.Text = "Trở về";
+            this.lb_back.Click += new System.EventHandler(this.lb_back_Click);
+            // 
             // OrderScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,12 +255,13 @@
             this.Name = "OrderScreen";
             this.Text = "OrderScreen";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.OrderScreen_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pb_back)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dd_orderType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_back)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,5 +282,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btn_payment;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox dd_orderType;
+        private System.Windows.Forms.FlowLayoutPanel flp_bill;
     }
 }
