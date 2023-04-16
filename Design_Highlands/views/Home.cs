@@ -33,7 +33,7 @@ namespace Design_Highlands
 
         private void logOut()
         {
-            DialogResult result = MessageBox.Show("Do you want to log out?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất không?", "Đăng xuất tài khoản", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             switch(result)
             {
                 case DialogResult.Cancel:
@@ -92,7 +92,7 @@ namespace Design_Highlands
                 staffsManagementView.ShowDialog();        
              } else
             {
-                MessageBox.Show("You don't have permission to access this field!", "Authorization", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Bạn không đủ quyền để sử dụng chức năng này!", "Authorization", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -106,7 +106,7 @@ namespace Design_Highlands
 
             } else
             {
-                MessageBox.Show("You don't have permission to access this field!", "Authorization", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Bạn không đủ quyền để sử dụng chức năng này!", "Authorization", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

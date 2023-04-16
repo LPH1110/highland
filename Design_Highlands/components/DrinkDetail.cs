@@ -62,9 +62,9 @@ namespace Design_Highlands.components
             switch(result)
             {
                 case DialogResult.Yes:
-                    foreach (DrinkDetail control in billPanel.Controls)
+                    foreach (DrinkDetail control in billPanel.Controls.OfType<DrinkDetail>())
                     {
-                        if (control.drink.Id.Equals(this.drink.Id))
+                        if (control.drink != null && control.drink.Id.Equals(this.drink.Id))
                         {
                             billPanel.Controls.Remove(control);
                             control.Dispose();

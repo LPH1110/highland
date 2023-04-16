@@ -136,6 +136,7 @@
             this.btn_coffee.Size = new System.Drawing.Size(126, 42);
             this.btn_coffee.TabIndex = 2;
             this.btn_coffee.Values.Text = "Cà phê";
+            this.btn_coffee.Click += new System.EventHandler(this.btn_coffee_Click);
             // 
             // btn_food
             // 

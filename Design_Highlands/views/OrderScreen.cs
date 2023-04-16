@@ -54,6 +54,26 @@ namespace Design_Highlands
             return drinks;
         }
 
+        private List<Drink> getCoffees()
+        {
+            List<Drink> drinks = new List<Drink>();
+            var client = new MongoClient("mongodb+srv://52000797:tQ!mTK6NW74wexq@highlandcluster.fc5jjn4.mongodb.net");
+            var db = client.GetDatabase("highland");
+            IMongoCollection<BsonDocument> collection = db.GetCollection<BsonDocument>("drinks");
+            List<BsonDocument> results = collection.Find(new BsonDocument()).ToList();
+
+            foreach (BsonDocument result in results)
+            {
+                Drink drink = BsonSerializer.Deserialize<Drink>(result);
+                if (drink.Type.Equals("coffee"))
+                {
+                    drinks.Add(drink);
+                }
+            }
+
+            return drinks;
+        }
+
         private List<Food> getFoods()
         {
             List<Food> foods = new List<Food>();
@@ -71,6 +91,17 @@ namespace Design_Highlands
             return foods;
         }
 
+        private void loadCoffees()
+        {
+            // Get all coffees from db
+            List<Drink> drinks = getCoffees();
+
+            foreach (Drink drink in drinks)
+            {
+                DrinkWidget widget = new DrinkWidget(drink, flp_bill);
+                flp_menu.Controls.Add(widget);
+            }
+        }
         private void loadDrinks()
         {
             // Get all drinks from db
@@ -85,7 +116,7 @@ namespace Design_Highlands
 
         private void loadFoods()
         {
-            // Get all drinks from db
+            // Get all foods from db
             List<Food> foods = getFoods();
 
             foreach (Food food in foods)
@@ -121,6 +152,12 @@ namespace Design_Highlands
         {
             flp_menu.Controls.Clear();
             loadFoods();
+        }
+
+        private void btn_coffee_Click(object sender, EventArgs e)
+        {
+            flp_menu.Controls.Clear();
+            loadCoffees();
         }
     }
 }

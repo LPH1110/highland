@@ -42,7 +42,7 @@ namespace Design_Highlands.components
             switch (result)
             {
                 case DialogResult.Yes:
-                    foreach (FoodDetail control in billPanel.Controls)
+                    foreach (FoodDetail control in billPanel.Controls.OfType<FoodDetail>())
                     {
                         if (control.food != null && control.food.Id.Equals(this.food.Id))
                         {
